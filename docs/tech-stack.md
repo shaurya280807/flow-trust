@@ -1,280 +1,206 @@
-# FlowTrust — Recommended Tech Stack
+# 2. Technology Stack
 
-**Status:** Recommended, not final. Nothing listed here has been built yet.
-Package versions and provider pricing will be checked before setup.
+## 2.1 Stack Status
 
-**Approach:** Start with a single Next.js + TypeScript app. Add a separate
-Python service only if the analytics later need it.
+The following technology stack is the recommended baseline for FlowTrust.
 
----
+The stack is intended to support a complete, functional portfolio prototype with a maintainable architecture, reliable financial calculations, appropriate data access controls, and room for future expansion.
 
-## 1. Stack at a glance
+The AI provider and certain implementation details remain undecided until explicitly finalized.
 
-| Layer | Technology | Why |
-|---|---|---|
-| Language | TypeScript | Types across frontend and server code catch mistakes early |
-| Web framework | Next.js (React) | Pages and server endpoints in one project, less setup |
-| Styling | Tailwind CSS | Fast, consistent, responsive styling |
-| UI components | shadcn/ui | Ready-made dialogs, cards, tables, forms |
-| Charts | Recharts | Income, expenses, cash balance and trends |
-| Icons | Lucide React | One consistent icon set |
-| CSV parsing | PapaParse | Reliable CSV reading instead of manual string splitting |
-| Validation | Zod | Checks uploaded rows and API input before processing |
-| Financial calculations | TypeScript modules (`lib/finance/`) | Deterministic, testable metrics |
-| AI explanations | OpenAI API (server-side) | Turns calculated metrics into plain-language summaries |
-| Database and auth | Supabase (PostgreSQL + Auth + Row Level Security) | Accounts, saved records, per-business access control |
-| Version control | Git + GitHub | History and collaboration |
-| Deployment | Vercel | Simple hosting for Next.js |
-| Optional analytics | Python + Pandas, optionally FastAPI | Only if heavier data processing is needed later |
+## 2.2 Frontend
 
-## 2. Why Next.js first
+- **Language:** TypeScript
+- **Framework:** Next.js with React
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Charts and Visualizations:** Recharts
+- **Icons:** Lucide React
 
-For a small team, one codebase is easier to build, deploy and debug.
+The frontend should be responsive and provide a consistent interface across the dashboard, financial records, customer and supplier profiles, risk simulator, AI Copilot, and reports.
 
-- Pages, UI and server endpoints live in one project.
-- Types are shared between frontend and server.
-- Fewer services to configure and deploy.
-- API keys and sensitive processing stay on the server.
+## 2.3 Backend and Application Architecture
 
-**Why not a separate Python backend from day one?** It is a second app to
-deploy, secure and connect. That is worth it for model-heavy work, but our
-first job is importing records and calculating clear metrics. We will add
-Python/FastAPI only if a real need comes up, such as a Python-only model or a
-larger data pipeline.
+- **Application Framework:** Next.js
+- **API Approach:** Server-side endpoints and server-side application logic within the Next.js application.
+- **Validation:** Zod
+- **Financial Calculations:** Dedicated TypeScript modules.
 
-## 3. Frontend
+The initial implementation will use a single Next.js codebase instead of maintaining a separate backend service.
 
-**Next.js + React** — sign-in and onboarding, CSV upload, dashboard,
-records table and filters, charts, risk explanations, reports.
+Business logic, data validation, authorization checks, and financial calculations must not depend on frontend components.
 
-**Tailwind CSS** — spacing, typography, colours, layout, responsive design.
+The architecture should keep its modules organized so that services can be separated later if the project's requirements justify it.
 
-**shadcn/ui** — buttons, cards, tabs, dropdowns, dialogs, tooltips, tables.
-Reviewed for accessibility and visual consistency.
+## 2.4 Database and Authentication
 
-**Recharts** — monthly income vs expenses, net cash-flow trend, balance over
-time, expense categories, projected balance scenarios. Every chart has labels,
-units and an empty state.
+- **Database:** PostgreSQL
+- **Database and Backend Platform:** Supabase
+- **Authentication:** Supabase Auth
+- **Data Access Security:** PostgreSQL Row Level Security (RLS), supported by server-side authorization checks.
 
-**Lucide React** — small, consistent icons.
+The data model must support multiple users belonging to the same business.
 
-## 4. Data import and validation
+Business records must be associated with the appropriate business, and users must only be able to access data they are authorized to access.
 
-**PapaParse** reads uploaded CSV files.
+Authentication alone is not sufficient authorization. Every protected operation must enforce the appropriate access rules.
 
-Expected fields (final format to be documented separately): date,
-description, amount, type, category, party, reference, due date.
+Detailed membership rules, roles, permissions, and authorization behaviour will be specified separately before implementation.
+## 2.4.1 Initial Business Access Model
 
-**Zod** validates every row before it reaches the calculations:
+### Initial Scope — Shared Access
 
-- Required fields are present.
-- Dates parse correctly.
-- Amounts are numeric and within sensible limits.
-- Types use supported values.
-- Duplicate rows are flagged.
-- Invalid rows are explained to the user.
+The initial version of FlowTrust will use a simple shared-access model for each business.
 
-The original upload is kept separate from the cleaned records, and a
-transaction's meaning is never changed silently.
+- A business may have multiple users.
+- All authorized members of a business will initially have the same level of access to that business's permitted features and data.
+- Members must only be able to access data belonging to businesses they are authorized to access.
+- Authentication and business membership must be verified before granting access to protected business data.
+- Users must not be able to access another business's data by changing an ID or manipulating an API request.
+- The system must enforce business-level data isolation through appropriate database policies and server-side authorization checks.
 
-## 5. Financial calculations
+The initial version will not implement separate Owner, Admin, Accountant, or Viewer permission levels.
 
-All calculations live in a separate, tested module (`lib/finance/`), never
-inside UI components and never done by the AI.
+### Future Scope — Role-Based Access Control
 
-| Metric | Calculation | What it tells the user |
-|---|---|---|
-| Total inflow | Sum of money received in the period | Money in |
-| Total outflow | Sum of money paid in the period | Money out |
-| Net cash flow | Inflow − outflow | Whether cash grew or shrank |
-| Essential expenses | Sum of expenses in essential categories | Regular commitments |
-| Reserve coverage | Available cash ÷ average monthly essential expenses | Months of expenses covered |
-| Income variability | Variation in monthly income over enough history | How predictable income is |
-| Late-payment rate | Late payments ÷ payments with known outcome | Payment punctuality |
-| Invoice ageing | Today − due date for unpaid invoices | How long amounts are overdue |
+More advanced access control may be introduced in future versions.
 
-Things to define before coding:
+Potential capabilities include:
 
-- How transfers, refunds and reversals are treated.
-- How to avoid double-counting (for example, a credit sale and its later payment).
-- What counts as an essential expense (may need the user's input).
-- Short or incomplete history must be shown as a limitation, not a confident result.
-- No derived indicator is called a credit score.
+- **Owner:** Manage the business and its membership.
+- **Admin:** Manage permitted business operations and members.
+- **Accountant:** Access and manage authorized financial records.
+- **Viewer:** Read permitted information without modifying records.
+- Granular permissions for viewing, creating, editing, and deleting specific types of records.
+- Business-specific role assignment and permission management.
 
-## 6. AI integration
+These roles and permissions are future possibilities, not commitments to a finalized permission design.
 
-**AI does:**
+### Design Consideration
 
-- Explain trends the calculation engine has already worked out.
-- Summarise changes across months.
-- Explain which figures led to a warning.
-- Write short plain-language reports.
-- Suggest questions worth looking into.
+Although the initial version uses shared access, the database and application architecture should avoid unnecessarily preventing role-based permissions from being added later.
 
-**Code does (never the AI):**
+## 2.5 CSV Import
 
-- Sums, averages, ratios and cash-flow figures.
-- Overdue checks.
-- Field validation.
-- Risk and resilience formulas.
-- Access permissions.
+- **CSV Parsing:** PapaParse
+- **Input Validation:** Zod
+- **Processing:** Server-side validation and controlled database writes.
 
-**Flow:**
+CSV imports must validate incoming data before creating financial records.
 
-1. Server validates and cleans the data.
-2. Calculation engine produces a small set of metrics.
-3. Server sends only those metrics and needed context to the model.
-4. Model returns a structured explanation.
-5. App checks the response and shows it next to the actual figures.
+The import process should provide understandable validation errors and help prevent accidental duplicate entries.
 
-Only the data the answer needs is sent. Users are told when an external AI
-provider processes their information. The API key never reaches the browser.
-If the AI is unavailable, the dashboard and calculations keep working.
+The exact duplicate-detection rules and import workflow will be defined separately.
 
-## 7. Database, authentication and security
+## 2.6 Financial Calculations
 
-Supabase handles accounts and saved financial history.
+Financial calculations will be implemented in dedicated TypeScript modules, initially organized under:
 
-Likely tables: `businesses`, `business_members`, `contacts`, `documents`
-(invoices and bills), `payments`, `import_jobs`.
+`lib/finance/`
 
-**Why PostgreSQL:** the data is relational. A business has many users,
-contacts, invoices and payments.
+These modules will be responsible for deterministic financial calculations used throughout FlowTrust.
 
-**Security rules:**
+Examples include:
 
-- Row Level Security so users only see their own business's data.
-- Service-role and AI keys stay on the server.
-- Never store banking passwords, UPI PINs, OTPs or card details.
-- Demo data is synthetic and labelled as such.
-- No raw financial records or secrets in logs.
-- Users can delete demo data.
+- Income and expense totals.
+- Net cash flow.
+- Outstanding receivables and payables.
+- Payment status and overdue amounts.
+- Cash runway and sustainability estimates.
+- Risk simulation calculations.
+- Metrics used in reports and customer/supplier analysis.
 
-## 8. Project structure
+The same calculation logic should be reused across the dashboard, simulator, reports, and AI Copilot wherever applicable.
 
-```text
-flowtrust/
-├── app/
-│   ├── page.tsx
-│   ├── dashboard/
-│   ├── records/
-│   ├── contacts/
-│   ├── simulator/
-│   ├── copilot/
-│   ├── reports/
-│   └── api/
-├── components/
-│   ├── dashboard/
-│   ├── charts/
-│   ├── records/
-│   └── ui/
-├── lib/
-│   ├── csv/          parse.ts, validate.ts
-│   ├── finance/      metrics.ts, simulator.ts
-│   ├── ai/           explain.ts
-│   └── supabase/
-├── types/
-├── tests/
-├── public/
-├── .env.example
-├── package.json
-└── README.md
-```
+Financial figures must be computed and validated by application logic rather than generated by an AI model.
 
-Folders are created as features are built, not all at once.
+Important calculations must have automated tests.
 
-## 9. Environment variables
+## 2.7 AI Copilot
 
-Secrets live in local `.env` files and in the hosting provider's settings.
-Only `.env.example` with empty placeholders is committed.
+The AI Copilot will use a server-side AI API integration.
 
-```bash
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
-SUPABASE_SERVICE_ROLE_KEY=
+**AI provider: UNDECIDED**
 
-# Server-side only
-OPENAI_API_KEY=
-```
+The provider will be selected after evaluating the available options and their suitability for FlowTrust.
 
-Anything prefixed `NEXT_PUBLIC_` is visible in the browser, so private keys
-never use that prefix. The anon key alone is not security; Row Level Security
-policies are.
+Regardless of provider:
 
-## 10. Deployment
+- API keys must remain server-side.
+- The AI should explain computed financial metrics rather than independently inventing financial figures.
+- The application must validate simulation inputs before processing them.
+- The AI should receive only the financial information necessary to answer the user's request.
+- The application must remain usable if the AI service is unavailable.
+- AI-generated insights should communicate uncertainty and avoid presenting estimates as guaranteed outcomes.
 
-- Code on GitHub.
-- Next.js app deployed to Vercel.
-- Environment variables set in Vercel.
-- All server routes tested after each deploy.
+## 2.8 Reports and PDF Export
 
-A separate Python service, if ever needed, is deployed on its own host with
-protected, validated endpoints.
+Reports will initially use browser-based printing and print-to-PDF.
 
-## 11. Build order
+Required report types include:
 
-**Phase 1: Core**
-Next.js project, dashboard shell and navigation, CSV import, validation,
-inflow / outflow / net cash flow.
+- Weekly financial reports.
+- Monthly financial reports.
+- Financial risk assessment reports.
+- Individual customer performance reports.
+- Individual supplier performance reports.
 
-**Phase 2: Differentiators**
-Customer and supplier payment metrics, reserve coverage, risk simulator,
-charts, warnings for incomplete data.
+Reports should use validated application data and provide a readable print layout.
 
-**Phase 3: AI and reports**
-Server-side AI explanations, error handling and rate limits, printable
-reports.
+A dedicated PDF-generation service is not required for the initial implementation unless later requirements justify it.
 
-**Phase 4: Release**
-Supabase auth and Row Level Security, Vercel deploy, mobile and desktop
-testing, demo dataset and rehearsed demo.
+## 2.9 Development and Deployment Tools
 
-## 12. Team split
+- **Version Control:** Git
+- **Repository Hosting:** GitHub
+- **Deployment:** Vercel
+- **Environment Configuration:** Environment variables
+- **Testing:** Automated tests for critical calculations, data validation, authorization, and important user workflows.
 
-| Member | Owns |
+Secrets and private API keys must never be committed to the repository.
+
+An `.env.example` file may document the required environment variable names without containing real credentials.
+
+Synthetic demo data must be clearly identified as demo data and must not be confused with actual business records.
+
+## 2.10 Optional Future Technologies
+
+Python, Pandas, or FastAPI may be considered later if FlowTrust develops analytical requirements that are difficult to maintain efficiently within the existing TypeScript architecture.
+
+These technologies are not part of the initial required stack.
+
+## 2.11 Stack Summary
+
+| Area | Recommended Technology |
 |---|---|
-| Developer 1 | Frontend, design system, dashboard, charts |
-| Developer 2 | CSV pipeline, financial calculations, tests |
-| Developer 3 (if available) | AI, Supabase, deployment, demo prep |
+| Language | TypeScript |
+| Frontend | Next.js + React |
+| Styling | Tailwind CSS |
+| UI Components | shadcn/ui |
+| Charts | Recharts |
+| Icons | Lucide React |
+| Backend | Next.js server-side logic and API endpoints |
+| Database | PostgreSQL |
+| Database Platform | Supabase |
+| Authentication | Supabase Auth |
+| Authorization | PostgreSQL RLS + server-side checks |
+| Validation | Zod |
+| CSV Parsing | PapaParse |
+| Financial Calculations | TypeScript modules |
+| AI Integration | Provider undecided |
+| Reports | Browser printing and print-to-PDF |
+| Version Control | Git + GitHub |
+| Deployment | Vercel |
+| Optional Future Analytics | Python / Pandas / FastAPI |
 
-With two people: one owns the finance engine and server endpoints, the other
-owns UI and integration. Agree on data types and API responses early.
+## 2.12 Implementation Priority
 
-## 13. Testing checklist
+Technology implementation must follow the project's agreed feature priority order:
 
-- [ ] Valid CSV imports correctly.
-- [ ] Missing or malformed columns give clear errors.
-- [ ] Money in and money out are handled consistently.
-- [ ] Nothing is double-counted.
-- [ ] Duplicate rows are flagged.
-- [ ] Empty history shows an empty state, not a false result.
-- [ ] Metrics match hand-calculated test cases.
-- [ ] Projections state their assumptions.
-- [ ] AI explanations match the supplied figures.
-- [ ] AI failure does not break the dashboard.
-- [ ] No secrets in the browser bundle or on GitHub.
-- [ ] Users cannot read another business's records.
-- [ ] Demo data is labelled as synthetic.
+- **P0 — Foundation:** Project setup, database, authentication, and financial data model.
+- **P1 — Core:** Financial records, dashboard, and CSV import.
+- **P2 — Intelligence:** Customer/supplier analysis and risk simulator.
+- **P3 — AI & Reports:** AI Copilot and financial reports.
+- **P4 — Polish:** Responsive refinements, usability improvements, and comprehensive testing.
 
-## 14. What we avoid
-
-- A separate microservice for every feature.
-- Letting the AI do financial arithmetic.
-- Claiming bank-verified data when the demo uses uploaded or synthetic CSVs.
-- Presenting a prototype indicator as an official credit score.
-- Real financial records in a public repository.
-- Storing bank logins or payment secrets.
-- Adding more data sources before the core workflow works.
-
-## 15. Summary
-
-**Core stack:** Next.js + TypeScript + Tailwind CSS + shadcn/ui + Recharts +
-PapaParse + Zod + server-side OpenAI API + Supabase + Vercel.
-
-**Later, only if needed:** Python + Pandas / FastAPI.
-
-**A good MVP lets someone:** upload a sample CSV, see validated records,
-understand key cash-flow figures, explore a risk scenario with a clear
-explanation, and get an AI summary based on those figures, with synthetic
-data clearly marked.
+The stack must support this sequence without requiring premature implementation of future features.
