@@ -46,7 +46,7 @@ The project will prioritise:
 The project will be developed incrementally. All major features do not need
 to be implemented simultaneously.
 
-## 1.3 Target Users
+## 1.3 Target Users and Account Structure
 
 The primary target users are small-business owners who need a clearer
 understanding of their cash flow, outstanding payments, financial risks,
@@ -54,6 +54,20 @@ and customer/supplier relationships.
 
 The platform should be understandable to users who do not have advanced
 financial or technical knowledge.
+
+### Initial Account Structure
+
+- A business may have multiple users.
+- Multiple authorised users may access the same business's data.
+- Business financial records must be associated with the correct business.
+- Authentication and access control must prevent unauthorised access to
+  another business's information.
+- The initial version will support the basic multi-user business structure.
+- A detailed user hierarchy, advanced roles, and granular permissions are
+  reserved for future scope.
+
+The initial access rules for users within a business must be defined during
+architecture and authentication design.
 
 ## 1.4 Core Features
 
@@ -236,20 +250,35 @@ specified during architecture design.
 
 The intended high-level user journey is:
 
-1. The user opens FlowTrust and logs in.
-2. The user accesses an existing business account or completes onboarding.
-3. The user imports financial records or enters records through the app.
-4. FlowTrust validates and stores the records.
-5. The dashboard presents the business's financial position.
-6. The user reviews customer and supplier payment behaviour.
-7. The user explores possible financial risks using the risk simulator.
-8. The user asks the AI Copilot questions about the available business data.
-9. The user generates weekly, monthly, risk, or individual relationship
-   reports.
-10. The user prints the reports or saves them as PDFs.
+```mermaid
+flowchart TD
+    A["1. User opens FlowTrust"] --> B["2. User logs in or creates an account"]
+    B --> C["3. User enters the associated business workspace"]
+    C --> D["4. Dashboard opens by default"]
+    D --> E["5. Other sections accessible through navigation"]
+    E --> F["6. User adds financial records"]
+    F --> F1["Import records (CSV)"]
+    F --> F2["Enter records manually"]
+    F --> F3["Load synthetic demonstration data"]
+    F1 --> G["7. FlowTrust validates and stores the records"]
+    F2 --> G
+    F3 --> G
+    G --> H["8. Dashboard presents the business's financial position"]
+    H --> I["9. User reviews customer and supplier payment behaviour"]
+    I --> J["10. User explores possible financial risks using the Risk Simulator"]
+    J --> K["11. User asks the AI Copilot questions about the available business data"]
+    K --> L["12. User generates weekly, monthly, risk, or individual relationship reports"]
+    L --> M["13. User prints reports or saves them as PDFs"]
+```
 
-This journey is a product-level outline. The exact navigation and
-implementation sequence will be defined later.
+The Dashboard is the default landing page after the user enters the business
+workspace.
+
+The other application sections should remain accessible through the
+application's navigation.
+
+The exact navigation structure, screen layouts, onboarding experience,
+and interactions will be finalised during the UI/UX design stage.
 
 ## 1.6 User Interface Requirements
 
@@ -291,20 +320,31 @@ These exclusions may be reconsidered in future versions.
 
 ## 1.8 Development Approach
 
-FlowTrust will be developed incrementally.
+FlowTrust will be developed incrementally while maintaining the agreed
+feature priority order:
 
-The development process will prioritise:
-1. Agreeing on product requirements.
-2. Finalising the technology stack.
-3. Designing the application architecture.
-4. Defining the database and financial data model.
-5. Specifying API contracts.
-6. Defining and testing financial calculations.
-7. Designing the user interface.
-8. Implementing the core workflows.
-9. Integrating risk simulation and AI capabilities.
-10. Implementing printable reports.
-11. Testing, debugging, and preparing the demonstration.
+- P0 ? Foundation
+- P1 ? Core financial functionality
+- P2 ? Customer/supplier intelligence and risk simulation
+- P3 ? AI Copilot and reporting
+- P4 ? UI polish, responsiveness, and final testing
+
+The initial scope is a complete, functional portfolio-quality prototype.
+All major features will be planned, but implementation will occur in phases.
+
+Development will follow these stages:
+
+1. Finalise product scope and user requirements.
+2. Finalise the technology stack.
+3. Design the application architecture.
+4. Define the database and financial data model.
+5. Specify API contracts.
+6. Define and test financial calculations.
+7. Design the user interface and user experience.
+8. Implement the core workflows.
+9. Integrate customer/supplier intelligence and risk simulation.
+10. Integrate AI capabilities and reporting.
+11. Test, debug, and prepare the demonstration.
 
 Antigravity and other AI development tools may assist with implementation,
 but generated code must be reviewed, understood, and tested.
