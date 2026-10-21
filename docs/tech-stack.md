@@ -46,39 +46,6 @@ Business records must be associated with the appropriate business, and users mus
 Authentication alone is not sufficient authorization. Every protected operation must enforce the appropriate access rules.
 
 Detailed membership rules, roles, permissions, and authorization behaviour will be specified separately before implementation.
-## 2.4.1 Initial Business Access Model
-
-### Initial Scope — Shared Access
-
-The initial version of FlowTrust will use a simple shared-access model for each business.
-
-- A business may have multiple users.
-- All authorized members of a business will initially have the same level of access to that business's permitted features and data.
-- Members must only be able to access data belonging to businesses they are authorized to access.
-- Authentication and business membership must be verified before granting access to protected business data.
-- Users must not be able to access another business's data by changing an ID or manipulating an API request.
-- The system must enforce business-level data isolation through appropriate database policies and server-side authorization checks.
-
-The initial version will not implement separate Owner, Admin, Accountant, or Viewer permission levels.
-
-### Future Scope — Role-Based Access Control
-
-More advanced access control may be introduced in future versions.
-
-Potential capabilities include:
-
-- **Owner:** Manage the business and its membership.
-- **Admin:** Manage permitted business operations and members.
-- **Accountant:** Access and manage authorized financial records.
-- **Viewer:** Read permitted information without modifying records.
-- Granular permissions for viewing, creating, editing, and deleting specific types of records.
-- Business-specific role assignment and permission management.
-
-These roles and permissions are future possibilities, not commitments to a finalized permission design.
-
-### Design Consideration
-
-Although the initial version uses shared access, the database and application architecture should avoid unnecessarily preventing role-based permissions from being added later.
 
 ## 2.5 CSV Import
 
