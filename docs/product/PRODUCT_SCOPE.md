@@ -1,9 +1,11 @@
-# FlowTrust — Project Specification
+# FlowTrust — Product Scope Specification
 
 **Project Name:** FlowTrust  
 **Tagline:** Beyond Balance. Into Resilience.  
-**Document Status:** In Progress  
-**Current Version:** 1.0
+**Document Status:** Approved MVP Baseline (v1.2)  
+**Authoritative Scope:** Product Vision, Target Users, Core Feature Scope, User Journey, and Phased Delivery Priorities  
+
+> **Navigation:** See the [Master Documentation Index](../README.md) for links to all authoritative technical, financial, dataset, and feature specifications.
 
 ---
 
@@ -66,8 +68,7 @@ financial or technical knowledge.
 - A detailed user hierarchy, advanced roles, and granular permissions are
   reserved for future scope.
 
-The initial access rules for users within a business must be defined during
-architecture and authentication design.
+Authoritative workspace membership, join-code onboarding, and access rules are defined in [WORKSPACE_AND_ONBOARDING_SPECIFICATION.md](./WORKSPACE_AND_ONBOARDING_SPECIFICATION.md) and [SECURITY_AND_DATA_INTEGRITY_SPECIFICATION.md](../architecture/SECURITY_AND_DATA_INTEGRITY_SPECIFICATION.md).
 
 ## 1.4 Core Features
 
@@ -85,8 +86,7 @@ Planned capabilities:
 - Provide easy access to CSV import.
 - Provide access to relevant financial and risk reports.
 
-Exact metrics, calculations, and chart definitions will be specified
-during the financial logic and UI/UX design stages.
+Authoritative calculation definitions are specified in [FINANCIAL_FOUNDATION_SPECIFICATION.md](../financial/FINANCIAL_FOUNDATION_SPECIFICATION.md) and layout structures in [UI_UX_AND_VISUAL_DESIGN_SPECIFICATION.md](../design/UI_UX_AND_VISUAL_DESIGN_SPECIFICATION.md).
 
 ### 1.4.2 Financial Records Management
 
@@ -105,7 +105,7 @@ Planned capabilities:
 Financial documents and actual cash movements must be handled separately
 to prevent incorrect cash-flow calculations and double-counting.
 
-Detailed transaction rules and data structures will be defined separately.
+Detailed transaction rules, canonical data structures, and CSV import workflows are defined in [FINANCIAL_FOUNDATION_SPECIFICATION.md](../financial/FINANCIAL_FOUNDATION_SPECIFICATION.md), [DATASET_STRATEGY_AND_SYNTHETIC_DATA_SPECIFICATION.md](../data/DATASET_STRATEGY_AND_SYNTHETIC_DATA_SPECIFICATION.md), and [CSV_IMPORT_AND_VALIDATION_SPECIFICATION.md](../data/CSV_IMPORT_AND_VALIDATION_SPECIFICATION.md).
 
 ### 1.4.3 Customer and Supplier Intelligence
 
@@ -127,6 +127,8 @@ is available.
 
 Insufficient transaction history must not be presented as a reliable rating.
 
+See [CUSTOMER_SUPPLIER_INTELLIGENCE_SPECIFICATION.md](../features/CUSTOMER_SUPPLIER_INTELLIGENCE_SPECIFICATION.md) for the complete specification.
+
 ### 1.4.4 Risk Simulator
 
 The risk simulator will help users explore how possible financial events
@@ -145,8 +147,7 @@ scenario and understand the potential financial impact.
 Simulation results must be clearly identified as projections, not actual
 financial outcomes.
 
-Exact formulas, assumptions, scenario parameters, and result classifications
-will be defined during the financial logic stage.
+See [RISK_SIMULATOR_SPECIFICATION.md](../features/RISK_SIMULATOR_SPECIFICATION.md) for the finalized formulas, projection horizons, scenario interactions, and test requirements.
 
 ### 1.4.5 AI Copilot
 
@@ -171,7 +172,7 @@ uncertainty, and avoid inventing missing financial information.
 The initial implementation is intended to be read-only, apart from
 explicitly permitted and validated simulation actions.
 
-AI provider selection and detailed integration rules remain to be finalised.
+See [AI_COPILOT_SPECIFICATION.md](../features/AI_COPILOT_SPECIFICATION.md) for the finalized MVP architecture, tool contracts, and fallback rules.
 
 ### 1.4.6 Reports and Printable Business Intelligence
 
@@ -194,12 +195,11 @@ Planned report types:
 - Comparison with a previous period where appropriate.
 - Relevant financial observations.
 
-**C. Risk Assessment Report**
-- Summary of relevant financial risks.
+**C. Yearly & Risk Assessment Reports**
+- Financial-year summary (April 1 – March 31) and evidence-backed risk assessment across all report categories.
 - Outstanding and overdue payment exposure.
 - Cash-buffer information.
-- Risk simulation results where available.
-- Clear separation between actual figures and projected outcomes.
+- Clear separation between Statistical Reports (factual only) and Risk Overview Reports (factual statistics + separate risk assessment).
 
 **D. Customer Performance Report**
 - Customer transaction history.
@@ -212,7 +212,7 @@ Planned report types:
 - Supplier transaction history.
 - Total invoiced amount and amount paid.
 - Outstanding and overdue balances.
-- Payment settlement metrics where sufficient data is available.
+- Payment obligations and settlement history where sufficient data is available.
 - Relevant historical trends.
 
 Report requirements:
@@ -226,25 +226,18 @@ Report requirements:
 - Reports must distinguish actual historical data from simulated projections.
 - Reports must not imply that unavailable information has been verified.
 
-The initial implementation may use browser printing and print-to-PDF.
-A separate PDF-generation system can be considered if required later.
+See [REPORTS_SPECIFICATION.md](../features/REPORTS_SPECIFICATION.md) for the authoritative reporting specification.
 
-The precise report layouts, available filters, and export options remain
-to be finalised.
-
-### 1.4.7 Account and Settings
+### 1.4.7 Account, Notifications, and Settings
 
 Planned capabilities:
 - Login and account-specific business data.
+- Multi-user business membership via join codes and workspace switching ([WORKSPACE_AND_ONBOARDING_SPECIFICATION.md](./WORKSPACE_AND_ONBOARDING_SPECIFICATION.md)).
 - Business preferences where required.
-- Light and dark themes.
+- Light, Dark, and System themes ([UI_UX_AND_VISUAL_DESIGN_SPECIFICATION.md](../design/UI_UX_AND_VISUAL_DESIGN_SPECIFICATION.md)).
+- Scoped in-app operational notifications and reminders ([NOTIFICATIONS_AND_REMINDERS_SPECIFICATION.md](../features/NOTIFICATIONS_AND_REMINDERS_SPECIFICATION.md)).
 - An onboarding experience for new accounts.
 - An option to load synthetic demonstration data.
-
-The initial product is expected to support one user per business.
-
-Authentication, authorisation, and account security requirements will be
-specified during architecture design.
 
 ## 1.5 User Journey
 
@@ -267,18 +260,14 @@ flowchart TD
     H --> I["9. User reviews customer and supplier payment behaviour"]
     I --> J["10. User explores possible financial risks using the Risk Simulator"]
     J --> K["11. User asks the AI Copilot questions about the available business data"]
-    K --> L["12. User generates weekly, monthly, risk, or individual relationship reports"]
+    K --> L["12. User generates weekly, monthly, yearly, or relationship reports"]
     L --> M["13. User prints reports or saves them as PDFs"]
 ```
 
 The Dashboard is the default landing page after the user enters the business
 workspace.
 
-The other application sections should remain accessible through the
-application's navigation.
-
-The exact navigation structure, screen layouts, onboarding experience,
-and interactions will be finalised during the UI/UX design stage.
+The other application sections remain accessible through the application's navigation.
 
 ## 1.6 User Interface Requirements
 
@@ -287,7 +276,7 @@ business-finance application.
 
 Planned design direction:
 - Muted and restrained colour palette.
-- Light and dark theme support.
+- Light, Dark, and System theme support.
 - Clear typography and visual hierarchy.
 - Consistent spacing and reusable components.
 - Readable financial tables and charts.
@@ -297,76 +286,51 @@ Planned design direction:
 - Print-friendly report layouts.
 
 The interface should avoid unnecessary visual complexity and prioritise
-readability of financial information.
-
-Detailed design tokens, colours, page layouts, and component specifications
-will be defined during the UI/UX stage.
+readability of financial information. See [UI_UX_AND_VISUAL_DESIGN_SPECIFICATION.md](../design/UI_UX_AND_VISUAL_DESIGN_SPECIFICATION.md).
 
 ## 1.7 Features Outside the Initial Scope
 
-The following are excluded from the initial prototype unless explicitly
-approved later:
+The following are excluded from the initial MVP unless explicitly approved later:
 
 - Inventory management.
-- Custom machine-learning model training.
-- Automatic access to external banking systems.
-- Arbitrary imports from every accounting or banking platform.
+- Custom machine-learning model training or unvalidated default-probability prediction.
+- Automatic access to external banking systems or automated bank reconciliation.
+- Arbitrary imports from every accounting or banking platform without mapping.
 - Automatic supplier quality or delivery assessment without supporting data.
 - AI-driven financial calculations without deterministic verification.
 - Unrestricted AI actions that modify financial records.
+- Monte Carlo simulation or complex financial optimization.
+- Email, SMS, or push notification infrastructure.
 - Complex enterprise accounting and tax workflows.
-
-These exclusions may be reconsidered in future versions.
 
 ## 1.8 Development Approach
 
 FlowTrust will be developed incrementally while maintaining the agreed
 feature priority order:
 
-- P0 ? Foundation
-- P1 ? Core financial functionality
-- P2 ? Customer/supplier intelligence and risk simulation
-- P3 ? AI Copilot and reporting
-- P4 ? UI polish, responsiveness, and final testing
+- **P0 — Foundation:** Project setup, database, authentication, workspace isolation, and financial data model.
+- **P1 — Core financial functionality:** Financial records, dashboard, and CSV import.
+- **P2 — Customer/supplier intelligence and risk simulation:** Directory profiles, payment delay metrics, and interactive Risk Simulator.
+- **P3 — AI Copilot and reporting:** Grounded AI Copilot, in-app notifications, and printable Statistical / Risk Overview reports.
+- **P4 — UI polish, responsiveness, and final testing:** Responsive refinements, usability polish, and end-to-end verification.
 
-The initial scope is a complete, functional portfolio-quality prototype.
-All major features will be planned, but implementation will occur in phases.
+## 1.9 Specification Status Summary
 
-Development will follow these stages:
+| Area | Status | Authoritative Document |
+|---|---|---|
+| Product Scope & Priorities | Finalized | [PRODUCT_SCOPE.md](./PRODUCT_SCOPE.md) |
+| Workspace, Onboarding & Auth Model | Finalized | [WORKSPACE_AND_ONBOARDING_SPECIFICATION.md](./WORKSPACE_AND_ONBOARDING_SPECIFICATION.md) |
+| Technology Stack & Architecture | Finalized | [TECH_STACK_AND_ARCHITECTURE.md](../architecture/TECH_STACK_AND_ARCHITECTURE.md) |
+| Security & Data Integrity | Finalized | [SECURITY_AND_DATA_INTEGRITY_SPECIFICATION.md](../architecture/SECURITY_AND_DATA_INTEGRITY_SPECIFICATION.md) |
+| Financial Foundation & Formulas | Finalized | [FINANCIAL_FOUNDATION_SPECIFICATION.md](../financial/FINANCIAL_FOUNDATION_SPECIFICATION.md) |
+| Canonical Data Model & Dataset Strategy | Finalized | [DATASET_STRATEGY_AND_SYNTHETIC_DATA_SPECIFICATION.md](../data/DATASET_STRATEGY_AND_SYNTHETIC_DATA_SPECIFICATION.md) |
+| CSV Import & Validation Workflow | Finalized | [CSV_IMPORT_AND_VALIDATION_SPECIFICATION.md](../data/CSV_IMPORT_AND_VALIDATION_SPECIFICATION.md) |
+| Risk Simulator MVP | Finalized | [RISK_SIMULATOR_SPECIFICATION.md](../features/RISK_SIMULATOR_SPECIFICATION.md) |
+| Customer & Supplier Intelligence | Finalized | [CUSTOMER_SUPPLIER_INTELLIGENCE_SPECIFICATION.md](../features/CUSTOMER_SUPPLIER_INTELLIGENCE_SPECIFICATION.md) |
+| Reports & Print/PDF Export | Finalized | [REPORTS_SPECIFICATION.md](../features/REPORTS_SPECIFICATION.md) |
+| AI Copilot MVP | Finalized | [AI_COPILOT_SPECIFICATION.md](../features/AI_COPILOT_SPECIFICATION.md) |
+| Notifications & Reminders | Finalized | [NOTIFICATIONS_AND_REMINDERS_SPECIFICATION.md](../features/NOTIFICATIONS_AND_REMINDERS_SPECIFICATION.md) |
+| UI/UX & Visual Design | Finalized (Adaptable on Screenshot Review) | [UI_UX_AND_VISUAL_DESIGN_SPECIFICATION.md](../design/UI_UX_AND_VISUAL_DESIGN_SPECIFICATION.md) |
+| Testing Strategy & Definition of Done | Finalized | [TESTING_AND_DEFINITION_OF_DONE.md](../quality/TESTING_AND_DEFINITION_OF_DONE.md) |
+| Deployment & Environment Readiness | Finalized | [DEPLOYMENT_AND_ENVIRONMENT_READINESS.md](../operations/DEPLOYMENT_AND_ENVIRONMENT_READINESS.md) |
 
-1. Finalise product scope and user requirements.
-2. Finalise the technology stack.
-3. Design the application architecture.
-4. Define the database and financial data model.
-5. Specify API contracts.
-6. Define and test financial calculations.
-7. Design the user interface and user experience.
-8. Implement the core workflows.
-9. Integrate customer/supplier intelligence and risk simulation.
-10. Integrate AI capabilities and reporting.
-11. Test, debug, and prepare the demonstration.
-
-Antigravity and other AI development tools may assist with implementation,
-but generated code must be reviewed, understood, and tested.
-
-Important architectural and product decisions must be documented before
-they are treated as final.
-
-## 1.9 Current Status
-
-**Project direction:** Portfolio-quality functional prototype.
-
-**Scope status:** Initial proposal documented; detailed requirements pending.
-
-**Technology stack:** Not finalised.
-
-**Database design:** Not finalised.
-
-**API specification:** Not finalised.
-
-**Financial formulas:** Require detailed specification and testing.
-
-**UI/UX design:** Direction established; detailed design pending.
-
-**Implementation:** To begin after the relevant requirements and
-technical decisions have been agreed upon.
