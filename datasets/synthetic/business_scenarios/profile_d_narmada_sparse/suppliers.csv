@@ -1,0 +1,2 @@
+id,business_id,external_code,name,email,phone,address,notes,status,created_at,updated_at
+531b03f5-3fdb-4f4c-b40e-7d9ebf9ddb2f,b3910724-3a42-4d7d-a5a3-02b55636b1a9,SUP-D01,Indore Wholesale Staples Mart,billing.indorestaples@example.com,+91-90000-00701,"Siyaganj Wholesale Market, Indore, Madhya Pradesh 452007",Initial inventory supplier.,ACTIVE,2026-10-22T09:00:00.000Z,2026-10-22T09:00:00.000Z

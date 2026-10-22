@@ -1,0 +1,7 @@
+transaction_date,description,amount,type,category,account,reference_id,counterparty_name,counterparty_role,document_number
+2026-10-05,Valid corrugated carton receipt,45000.00,INFLOW,Sales,BANK,UTR-SYNTH-ERR401,Sahyadri Foods Pvt Ltd,CUSTOMER,
+2026-02-30,Invalid February 30 date row,12000.00,OUTFLOW,Rent,BANK,UTR-SYNTH-ERR402,,,
+2026-10-08,Corrupted alphanumeric amount,"₹12,abc.00",INFLOW,Sales,BANK,UTR-SYNTH-ERR403,,,
+2026-10-09,Zero rupee entry not allowed,0.00,OUTFLOW,Other Expenses,CASH,UTR-SYNTH-ERR404,,,
+2026-10-10,Missing direction enum row,8500.00,,Sales,BANK,UTR-SYNTH-ERR405,,,
+2026-10-11,,15000.00,OUTFLOW,Utilities,BANK,UTR-SYNTH-ERR406,,,

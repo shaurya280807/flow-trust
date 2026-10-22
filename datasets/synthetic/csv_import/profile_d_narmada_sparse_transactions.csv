@@ -1,0 +1,4 @@
+transaction_date,description,amount,type,category,account,reference_id,counterparty_name,counterparty_role,document_number
+2026-10-14,Shop advance rent - October 2026,6500.00,OUTFLOW,Rent,BANK,UTR-SYNTH-DD001,,,
+2026-10-18,Payment received against INV-D26-001 - Tapi Kirana & Provision Store,18000.00,INFLOW,Sales,BANK,UTR-SYNTH-D001,Tapi Kirana & Provision Store,CUSTOMER,INV-D26-001
+2026-10-22,Counter cash sales,4200.00,INFLOW,Sales,CASH,CASH-SYNTH-D001,,,

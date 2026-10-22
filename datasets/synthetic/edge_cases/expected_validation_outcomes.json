@@ -1,0 +1,184 @@
+{
+  "specification_reference": "docs/data/CSV_IMPORT_AND_VALIDATION_SPECIFICATION.md",
+  "isolated_from_demo_workspaces": true,
+  "fixtures": [
+    {
+      "file": "fixture_01_empty_file.csv",
+      "format": "FORMAT_1_TRANSACTIONS",
+      "file_level_error": "ERR_FILE_EMPTY",
+      "valid_rows": 0,
+      "error_rows": 0,
+      "warning_rows": 0
+    },
+    {
+      "file": "fixture_02_headers_only.csv",
+      "format": "FORMAT_1_TRANSACTIONS",
+      "file_level_error": "ERR_NO_DATA_ROWS",
+      "valid_rows": 0,
+      "error_rows": 0,
+      "warning_rows": 0
+    },
+    {
+      "file": "fixture_03_missing_required_columns.csv",
+      "format": "FORMAT_1_TRANSACTIONS",
+      "file_level_error": "ERR_MISSING_REQUIRED_COLUMNS",
+      "missing_columns": [
+        "transaction_date",
+        "amount"
+      ],
+      "valid_rows": 0,
+      "error_rows": 0,
+      "warning_rows": 0
+    },
+    {
+      "file": "fixture_04_malformed_dates_and_amounts.csv",
+      "format": "FORMAT_1_TRANSACTIONS",
+      "file_level_error": null,
+      "valid_rows": 1,
+      "error_rows": 5,
+      "warning_rows": 0,
+      "row_assertions": [
+        {
+          "row_number": 2,
+          "outcome": "VALID"
+        },
+        {
+          "row_number": 3,
+          "outcome": "ERROR",
+          "code": "ERR_DATE_INVALID"
+        },
+        {
+          "row_number": 4,
+          "outcome": "ERROR",
+          "code": "ERR_AMOUNT_INVALID"
+        },
+        {
+          "row_number": 5,
+          "outcome": "ERROR",
+          "code": "ERR_AMOUNT_ZERO"
+        },
+        {
+          "row_number": 6,
+          "outcome": "ERROR",
+          "code": "ERR_DIRECTION_MISSING"
+        },
+        {
+          "row_number": 7,
+          "outcome": "ERROR",
+          "code": "ERR_DESCRIPTION_EMPTY"
+        }
+      ]
+    },
+    {
+      "file": "fixture_05_bank_debit_credit_conflict_and_markers.csv",
+      "format": "FORMAT_2_BANK_STATEMENT",
+      "file_level_error": null,
+      "valid_rows": 1,
+      "error_rows": 1,
+      "warning_rows": 2,
+      "row_assertions": [
+        {
+          "row_number": 2,
+          "outcome": "WARNING",
+          "code": "WARN_OPENING_BALANCE_ROW"
+        },
+        {
+          "row_number": 3,
+          "outcome": "VALID"
+        },
+        {
+          "row_number": 4,
+          "outcome": "ERROR",
+          "code": "ERR_DEBIT_CREDIT_CONFLICT"
+        },
+        {
+          "row_number": 5,
+          "outcome": "WARNING",
+          "code": "WARN_INTERNAL_TRANSFER"
+        }
+      ]
+    },
+    {
+      "file": "fixture_06_mixed_date_formats.csv",
+      "format": "FORMAT_1_TRANSACTIONS",
+      "file_level_error": null,
+      "valid_rows": 1,
+      "error_rows": 1,
+      "warning_rows": 0,
+      "row_assertions": [
+        {
+          "row_number": 2,
+          "outcome": "VALID"
+        },
+        {
+          "row_number": 3,
+          "outcome": "ERROR",
+          "code": "ERR_DATE_INVALID"
+        }
+      ]
+    },
+    {
+      "file": "fixture_07_duplicates_and_reimport.csv",
+      "format": "FORMAT_1_TRANSACTIONS",
+      "file_level_error": null,
+      "valid_rows": 2,
+      "error_rows": 0,
+      "warning_rows": 2,
+      "row_assertions": [
+        {
+          "row_number": 2,
+          "outcome": "VALID"
+        },
+        {
+          "row_number": 3,
+          "outcome": "WARNING",
+          "code": "WARN_CONFIRMED_DUPLICATE"
+        },
+        {
+          "row_number": 4,
+          "outcome": "WARNING",
+          "code": "WARN_POSSIBLE_DUPLICATE"
+        },
+        {
+          "row_number": 5,
+          "outcome": "VALID",
+          "note": "Same date & amount but distinct description/counterparty"
+        }
+      ]
+    },
+    {
+      "file": "fixture_08_inconsistent_documents.csv",
+      "format": "FORMAT_3_DOCUMENTS",
+      "file_level_error": null,
+      "valid_rows": 1,
+      "error_rows": 4,
+      "warning_rows": 0,
+      "row_assertions": [
+        {
+          "row_number": 2,
+          "outcome": "VALID"
+        },
+        {
+          "row_number": 3,
+          "outcome": "ERROR",
+          "code": "ERR_DOC_DUE_BEFORE_ISSUE"
+        },
+        {
+          "row_number": 4,
+          "outcome": "ERROR",
+          "code": "ERR_DOC_OVERPAID"
+        },
+        {
+          "row_number": 5,
+          "outcome": "ERROR",
+          "code": "ERR_DOC_SETTLEMENT_DATE_MISSING"
+        },
+        {
+          "row_number": 6,
+          "outcome": "ERROR",
+          "code": "ERR_DOC_STATUS_MISMATCH"
+        }
+      ]
+    }
+  ]
+}

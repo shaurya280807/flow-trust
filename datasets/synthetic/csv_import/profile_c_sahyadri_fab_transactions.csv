@@ -1,0 +1,13 @@
+transaction_date,description,amount,type,category,account,reference_id,counterparty_name,counterparty_role,document_number
+2026-08-03,Welders & fitters wages - July 2026,48000.00,OUTFLOW,Salaries,BANK,UTR-SYNTH-CD001,,,
+2026-08-12,Payment received against INV-C26-001 - Western Sugar & Distillery Ltd,165000.00,INFLOW,Fabrication Job-Work,BANK,UTR-SYNTH-C001,Western Sugar & Distillery Ltd,CUSTOMER,INV-C26-001
+2026-08-14,Supplier payment against BILL-C26-001 - Ratnagiri Steel & Plates Traders,148000.00,OUTFLOW,Inventory Purchases,BANK,UTR-SYNTH-CB001,Ratnagiri Steel & Plates Traders,SUPPLIER,BILL-C26-001
+2026-08-21,Mobile hydra crane rental for hopper erection,31500.00,OUTFLOW,Other Expenses,BANK,UTR-SYNTH-CD002,,,
+2026-09-04,Welders & fitters wages + overtime - August 2026,52000.00,OUTFLOW,Salaries,BANK,UTR-SYNTH-CD003,,,
+2026-09-14,Payment received against INV-C26-002 - Western Sugar & Distillery Ltd,95000.00,INFLOW,Fabrication Job-Work,BANK,UTR-SYNTH-C002,Western Sugar & Distillery Ltd,CUSTOMER,INV-C26-002
+2026-09-18,Supplier payment against BILL-C26-002 - ArcWeld Industrial Gases & Consumables,44000.00,OUTFLOW,Inventory Purchases,BANK,UTR-SYNTH-CB002,ArcWeld Industrial Gases & Consumables,SUPPLIER,BILL-C26-002
+2026-09-25,Heavy MS plate offcut & turning scrap sale,14120.00,INFLOW,Other Income,CASH,CASH-SYNTH-C001,,,
+2026-10-03,Welders & fitters wages - September 2026,49000.00,OUTFLOW,Salaries,BANK,UTR-SYNTH-CD004,,,
+2026-10-09,Payment received against INV-C26-003 - Western Sugar & Distillery Ltd,110000.00,INFLOW,Fabrication Job-Work,BANK,UTR-SYNTH-C003,Western Sugar & Distillery Ltd,CUSTOMER,INV-C26-003
+2026-10-11,Emergency 400A MIG rectifier transformer rewinding & repair,38000.00,OUTFLOW,Other Expenses,BANK,UTR-SYNTH-CD005,,,
+2026-10-16,High-load industrial power bill & diesel generator fuel,30000.00,OUTFLOW,Utilities,BANK,UTR-SYNTH-CD006,,,

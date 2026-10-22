@@ -1,0 +1,1119 @@
+{
+  "generator": "datasets/synthetic/scripts/generate_datasets.mjs",
+  "generator_version": "1.0.0",
+  "anchor_date": "2026-10-22",
+  "synthetic_disclaimer": "100% SYNTHETIC DEMONSTRATION & TEST DATASETS. All businesses, counterparties, contact details (@example.com, +91-90000-000XX), and payment references (UTR-SYNTH-*) are fictional.",
+  "authoritative_specifications": [
+    "docs/data/DATASET_STRATEGY_AND_SYNTHETIC_DATA_SPECIFICATION.md",
+    "docs/data/CSV_IMPORT_AND_VALIDATION_SPECIFICATION.md",
+    "docs/financial/FINANCIAL_FOUNDATION_SPECIFICATION.md",
+    "docs/features/CUSTOMER_SUPPLIER_INTELLIGENCE_SPECIFICATION.md",
+    "docs/features/RISK_SIMULATOR_SPECIFICATION.md",
+    "docs/features/REPORTS_SPECIFICATION.md"
+  ],
+  "scenarios": [
+    {
+      "slug": "profile_a_kaveri_packaging",
+      "business_id": "fec6f8ac-fc0e-4cf0-a5ba-b49b6a9dabc3",
+      "business_name": "Kaveri Packaging Solutions Pvt Ltd",
+      "scenario_title": "Healthy & Stable Business with Mixed Customer Payment Behaviour (Primary Demo Workspace)",
+      "as_of_date": "2026-10-22",
+      "record_counts": {
+        "categories": 14,
+        "customers": 8,
+        "suppliers": 5,
+        "invoices": 33,
+        "bills": 13,
+        "transactions": 67,
+        "payments": 38
+      },
+      "expected_ground_truth": {
+        "as_of_date": "2026-10-22",
+        "opening_cash_balance": 340000,
+        "opening_balance_date": "2026-04-30",
+        "post_opening_inflows": 1285000,
+        "post_opening_outflows": 1145000,
+        "pre_opening_historical_inflows": 827000,
+        "pre_opening_historical_outflows": 610000,
+        "available_cash": 480000,
+        "total_outstanding_receivables": 315000,
+        "overdue_receivables": 75000,
+        "missing_due_date_receivables": 0,
+        "open_invoices_count": 6,
+        "overdue_invoices_count": 2,
+        "total_outstanding_payables": 195000,
+        "overdue_payables": 0,
+        "bills_due_soon_7d": 85000,
+        "bills_due_8_to_30d": 110000,
+        "open_bills_count": 4,
+        "overdue_bills_count": 0,
+        "bills_due_soon_7d_count": 2,
+        "cash_coverage_warning_active": false,
+        "reporting_periods": {
+          "weekly_oct_12_to_18_2026": {
+            "start_date": "2026-10-12",
+            "end_date": "2026-10-18",
+            "transaction_count": 5,
+            "cash_inflows": 20000,
+            "cash_outflows": 68000,
+            "net_cash_flow": -48000
+          },
+          "weekly_oct_05_to_11_2026": {
+            "start_date": "2026-10-05",
+            "end_date": "2026-10-11",
+            "transaction_count": 5,
+            "cash_inflows": 110000,
+            "cash_outflows": 122000,
+            "net_cash_flow": -12000
+          },
+          "monthly_october_2026": {
+            "start_date": "2026-10-01",
+            "end_date": "2026-10-31",
+            "transaction_count": 13,
+            "cash_inflows": 240000,
+            "cash_outflows": 190000,
+            "net_cash_flow": 50000
+          },
+          "monthly_september_2026": {
+            "start_date": "2026-09-01",
+            "end_date": "2026-09-30",
+            "transaction_count": 9,
+            "cash_inflows": 241000,
+            "cash_outflows": 200000,
+            "net_cash_flow": 41000
+          },
+          "fy_2026_27_ytd": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "transaction_count": 53,
+            "cash_inflows": 1475000,
+            "cash_outflows": 1320000,
+            "net_cash_flow": 155000
+          },
+          "fy_2025_26_full": {
+            "start_date": "2025-04-01",
+            "end_date": "2026-03-31",
+            "transaction_count": 14,
+            "cash_inflows": 637000,
+            "cash_outflows": 435000,
+            "net_cash_flow": 202000
+          }
+        },
+        "customer_intelligence": [
+          {
+            "customer_code": "CUST-001",
+            "customer_name": "Sahyadri Foods Pvt Ltd",
+            "status": "ACTIVE",
+            "total_invoiced": 630000,
+            "total_received": 555000,
+            "outstanding_receivable": 75000,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 6,
+            "average_delay_days": -1.5,
+            "median_delay_days": -1.5,
+            "on_time_payment_rate_pct": 100,
+            "recent_delay_trend": "STABLE",
+            "collection_risk_indicator": "Regular Payer"
+          },
+          {
+            "customer_code": "CUST-002",
+            "customer_name": "Deccan Beverages LLP",
+            "status": "ACTIVE",
+            "total_invoiced": 480000,
+            "total_received": 455000,
+            "outstanding_receivable": 25000,
+            "overdue_receivable": 25000,
+            "max_days_overdue": 12,
+            "completed_eligible_invoices_count": 6,
+            "average_delay_days": 5.7,
+            "median_delay_days": 4.5,
+            "on_time_payment_rate_pct": 50,
+            "recent_delay_trend": "DELAYS_INCREASING",
+            "collection_risk_indicator": "Watch — Payment Delays"
+          },
+          {
+            "customer_code": "CUST-003",
+            "customer_name": "Malwa Agro Exports Pvt Ltd",
+            "status": "ACTIVE",
+            "total_invoiced": 370000,
+            "total_received": 320000,
+            "outstanding_receivable": 50000,
+            "overdue_receivable": 50000,
+            "max_days_overdue": 38,
+            "completed_eligible_invoices_count": 4,
+            "average_delay_days": 18.3,
+            "median_delay_days": 22.5,
+            "on_time_payment_rate_pct": 25,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Elevated Overdue Exposure"
+          },
+          {
+            "customer_code": "CUST-004",
+            "customer_name": "Konkan Spices Co",
+            "status": "ACTIVE",
+            "total_invoiced": 45000,
+            "total_received": 45000,
+            "outstanding_receivable": 0,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 1,
+            "average_delay_days": null,
+            "median_delay_days": null,
+            "on_time_payment_rate_pct": null,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Insufficient Data"
+          },
+          {
+            "customer_code": "CUST-005",
+            "customer_name": "Vidarbha Textile Mills Ltd",
+            "status": "ACTIVE",
+            "total_invoiced": 505000,
+            "total_received": 440000,
+            "outstanding_receivable": 65000,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 6,
+            "average_delay_days": -2,
+            "median_delay_days": -2.5,
+            "on_time_payment_rate_pct": 83.3,
+            "recent_delay_trend": "TIMING_IMPROVING",
+            "collection_risk_indicator": "Regular Payer"
+          },
+          {
+            "customer_code": "CUST-006",
+            "customer_name": "Narmada Organic Retail Hub",
+            "status": "ACTIVE",
+            "total_invoiced": 130000,
+            "total_received": 75000,
+            "outstanding_receivable": 55000,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 2,
+            "average_delay_days": null,
+            "median_delay_days": null,
+            "on_time_payment_rate_pct": null,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Insufficient Data"
+          },
+          {
+            "customer_code": "CUST-007",
+            "customer_name": "Aravalli Home Care Boutique",
+            "status": "ACTIVE",
+            "total_invoiced": 45000,
+            "total_received": 0,
+            "outstanding_receivable": 45000,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 0,
+            "average_delay_days": null,
+            "median_delay_days": null,
+            "on_time_payment_rate_pct": null,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Insufficient Data"
+          },
+          {
+            "customer_code": "CUST-008",
+            "customer_name": "Satpura Legacy Traders (Archived)",
+            "status": "ARCHIVED",
+            "total_invoiced": 45000,
+            "total_received": 45000,
+            "outstanding_receivable": 0,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 1,
+            "average_delay_days": null,
+            "median_delay_days": null,
+            "on_time_payment_rate_pct": null,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Insufficient Data"
+          }
+        ],
+        "supplier_intelligence": [
+          {
+            "supplier_code": "SUP-001",
+            "supplier_name": "Shree Kraft Paper Mills Pvt Ltd",
+            "total_billed": 685000,
+            "total_paid": 635000,
+            "outstanding_payable": 50000,
+            "overdue_payable": 0,
+            "bills_due_soon_7d": 50000
+          },
+          {
+            "supplier_code": "SUP-002",
+            "supplier_name": "Bharat Adhesives & Inks LLP",
+            "total_billed": 150000,
+            "total_paid": 115000,
+            "outstanding_payable": 35000,
+            "overdue_payable": 0,
+            "bills_due_soon_7d": 35000
+          },
+          {
+            "supplier_code": "SUP-003",
+            "supplier_name": "Godavari Corrugation Machinery Services",
+            "total_billed": 105000,
+            "total_paid": 45000,
+            "outstanding_payable": 60000,
+            "overdue_payable": 0,
+            "bills_due_soon_7d": 0
+          },
+          {
+            "supplier_code": "SUP-004",
+            "supplier_name": "Pune Industrial Logistics Co",
+            "total_billed": 120000,
+            "total_paid": 70000,
+            "outstanding_payable": 50000,
+            "overdue_payable": 0,
+            "bills_due_soon_7d": 0
+          },
+          {
+            "supplier_code": "SUP-005",
+            "supplier_name": "MahaTech Cloud & ERP Solutions",
+            "total_billed": 0,
+            "total_paid": 0,
+            "outstanding_payable": 0,
+            "overdue_payable": 0,
+            "bills_due_soon_7d": 0
+          }
+        ],
+        "risk_simulator_30d": {
+          "horizon_days": 30,
+          "history_span_days": 515,
+          "has_sufficient_history_for_run_rate": true,
+          "daily_operating_inflow_run_rate": 1244.44,
+          "daily_operating_outflow_run_rate": 4555.56,
+          "excluded_overdue_over_90d_receivables": 0,
+          "excluded_missing_due_date_receivables": 0,
+          "baseline_projection": {
+            "ending_cash": 500666.4,
+            "minimum_projected_cash": 416755.52,
+            "minimum_cash_day_offset": 4,
+            "projected_shortfall_amount": 0,
+            "first_shortfall_day_offset": null,
+            "receivables_shifted_beyond_horizon": 0,
+            "receivables_shifted_count": 0
+          },
+          "combined_stress_scenario": {
+            "ending_cash": -48666.9,
+            "minimum_projected_cash": -48666.9,
+            "minimum_cash_day_offset": 30,
+            "projected_shortfall_amount": 48666.9,
+            "first_shortfall_day_offset": 23,
+            "receivables_shifted_beyond_horizon": 315000,
+            "receivables_shifted_count": 6
+          }
+        }
+      }
+    },
+    {
+      "slug": "profile_b_vindhya_electricals",
+      "business_id": "04050fc3-8395-4885-840c-407da8b0a03d",
+      "business_name": "Vindhya Electricals & Switchgear Co",
+      "scenario_title": "Delayed Customer Payments & Acute Cash-Flow Pressure",
+      "as_of_date": "2026-10-22",
+      "record_counts": {
+        "categories": 12,
+        "customers": 4,
+        "suppliers": 3,
+        "invoices": 13,
+        "bills": 5,
+        "transactions": 20,
+        "payments": 13
+      },
+      "expected_ground_truth": {
+        "as_of_date": "2026-10-22",
+        "opening_cash_balance": 180000,
+        "opening_balance_date": "2026-06-30",
+        "post_opening_inflows": 653450,
+        "post_opening_outflows": 721000,
+        "pre_opening_historical_inflows": 0,
+        "pre_opening_historical_outflows": 0,
+        "available_cash": 112450,
+        "total_outstanding_receivables": 485000,
+        "overdue_receivables": 370000,
+        "missing_due_date_receivables": 0,
+        "open_invoices_count": 4,
+        "overdue_invoices_count": 3,
+        "total_outstanding_payables": 267000,
+        "overdue_payables": 95000,
+        "bills_due_soon_7d": 130000,
+        "bills_due_8_to_30d": 42000,
+        "open_bills_count": 3,
+        "overdue_bills_count": 1,
+        "bills_due_soon_7d_count": 1,
+        "cash_coverage_warning_active": true,
+        "reporting_periods": {
+          "weekly_oct_12_to_18_2026": {
+            "start_date": "2026-10-12",
+            "end_date": "2026-10-18",
+            "transaction_count": 3,
+            "cash_inflows": 18450,
+            "cash_outflows": 74000,
+            "net_cash_flow": -55550
+          },
+          "weekly_oct_05_to_11_2026": {
+            "start_date": "2026-10-05",
+            "end_date": "2026-10-11",
+            "transaction_count": 3,
+            "cash_inflows": 95000,
+            "cash_outflows": 28000,
+            "net_cash_flow": 67000
+          },
+          "monthly_october_2026": {
+            "start_date": "2026-10-01",
+            "end_date": "2026-10-31",
+            "transaction_count": 6,
+            "cash_inflows": 113450,
+            "cash_outflows": 102000,
+            "net_cash_flow": 11450
+          },
+          "monthly_september_2026": {
+            "start_date": "2026-09-01",
+            "end_date": "2026-09-30",
+            "transaction_count": 7,
+            "cash_inflows": 345000,
+            "cash_outflows": 90000,
+            "net_cash_flow": 255000
+          },
+          "fy_2026_27_ytd": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "transaction_count": 20,
+            "cash_inflows": 653450,
+            "cash_outflows": 721000,
+            "net_cash_flow": -67550
+          },
+          "fy_2025_26_full": {
+            "start_date": "2025-04-01",
+            "end_date": "2026-03-31",
+            "transaction_count": 0,
+            "cash_inflows": 0,
+            "cash_outflows": 0,
+            "net_cash_flow": 0
+          }
+        },
+        "customer_intelligence": [
+          {
+            "customer_code": "CUST-B01",
+            "customer_name": "Bundelkhand Infra Projects Ltd",
+            "status": "ACTIVE",
+            "total_invoiced": 510000,
+            "total_received": 250000,
+            "outstanding_receivable": 260000,
+            "overdue_receivable": 260000,
+            "max_days_overdue": 102,
+            "completed_eligible_invoices_count": 3,
+            "average_delay_days": 32.3,
+            "median_delay_days": 34,
+            "on_time_payment_rate_pct": 0,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Elevated Overdue Exposure"
+          },
+          {
+            "customer_code": "CUST-B02",
+            "customer_name": "Chambal Solar & Power Systems",
+            "status": "ACTIVE",
+            "total_invoiced": 345000,
+            "total_received": 235000,
+            "outstanding_receivable": 110000,
+            "overdue_receivable": 110000,
+            "max_days_overdue": 20,
+            "completed_eligible_invoices_count": 3,
+            "average_delay_days": 15.7,
+            "median_delay_days": 16,
+            "on_time_payment_rate_pct": 0,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Elevated Overdue Exposure"
+          },
+          {
+            "customer_code": "CUST-B03",
+            "customer_name": "Rewa Commercial Builders LLP",
+            "status": "ACTIVE",
+            "total_invoiced": 115000,
+            "total_received": 0,
+            "outstanding_receivable": 115000,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 0,
+            "average_delay_days": null,
+            "median_delay_days": null,
+            "on_time_payment_rate_pct": null,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Insufficient Data"
+          },
+          {
+            "customer_code": "CUST-B04",
+            "customer_name": "Mahakoshal Hospitalities Pvt Ltd",
+            "status": "ACTIVE",
+            "total_invoiced": 150000,
+            "total_received": 150000,
+            "outstanding_receivable": 0,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 3,
+            "average_delay_days": -1,
+            "median_delay_days": -1,
+            "on_time_payment_rate_pct": 100,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Regular Payer"
+          }
+        ],
+        "supplier_intelligence": [
+          {
+            "supplier_code": "SUP-B01",
+            "supplier_name": "VoltGuard Switchgear OEM Ltd",
+            "total_billed": 355000,
+            "total_paid": 260000,
+            "outstanding_payable": 95000,
+            "overdue_payable": 95000,
+            "bills_due_soon_7d": 0
+          },
+          {
+            "supplier_code": "SUP-B02",
+            "supplier_name": "Kaveri Copper Cables Pvt Ltd",
+            "total_billed": 325000,
+            "total_paid": 195000,
+            "outstanding_payable": 130000,
+            "overdue_payable": 0,
+            "bills_due_soon_7d": 130000
+          },
+          {
+            "supplier_code": "SUP-B03",
+            "supplier_name": "Central Freight & Warehousing",
+            "total_billed": 42000,
+            "total_paid": 0,
+            "outstanding_payable": 42000,
+            "overdue_payable": 0,
+            "bills_due_soon_7d": 0
+          }
+        ],
+        "risk_simulator_30d": {
+          "horizon_days": 30,
+          "history_span_days": 95,
+          "has_sufficient_history_for_run_rate": true,
+          "daily_operating_inflow_run_rate": 205,
+          "daily_operating_outflow_run_rate": 2955.56,
+          "excluded_overdue_over_90d_receivables": 140000,
+          "excluded_missing_due_date_receivables": 0,
+          "baseline_projection": {
+            "ending_cash": -12066.8,
+            "minimum_projected_cash": -142806.16,
+            "minimum_cash_day_offset": 11,
+            "projected_shortfall_amount": 142806.16,
+            "first_shortfall_day_offset": 4,
+            "receivables_shifted_beyond_horizon": 0,
+            "receivables_shifted_count": 0
+          },
+          "combined_stress_scenario": {
+            "ending_cash": -463604.3,
+            "minimum_projected_cash": -463604.3,
+            "minimum_cash_day_offset": 30,
+            "projected_shortfall_amount": 463604.3,
+            "first_shortfall_day_offset": 1,
+            "receivables_shifted_beyond_horizon": 225000,
+            "receivables_shifted_count": 2
+          }
+        }
+      }
+    },
+    {
+      "slug": "profile_c_sahyadri_fab_irregular",
+      "business_id": "aadbb27e-a740-402d-9de9-55167cc3076e",
+      "business_name": "Sahyadri Fab & Engineering Works",
+      "scenario_title": "Irregular Milestone Income & Variable Expenses with Thin Cash Buffer",
+      "as_of_date": "2026-10-22",
+      "record_counts": {
+        "categories": 13,
+        "customers": 3,
+        "suppliers": 2,
+        "invoices": 5,
+        "bills": 4,
+        "transactions": 12,
+        "payments": 5
+      },
+      "expected_ground_truth": {
+        "as_of_date": "2026-10-22",
+        "opening_cash_balance": 135000,
+        "opening_balance_date": "2026-07-15",
+        "post_opening_inflows": 384120,
+        "post_opening_outflows": 440500,
+        "pre_opening_historical_inflows": 0,
+        "pre_opening_historical_outflows": 0,
+        "available_cash": 78620,
+        "total_outstanding_receivables": 265000,
+        "overdue_receivables": 125000,
+        "missing_due_date_receivables": 0,
+        "open_invoices_count": 2,
+        "overdue_invoices_count": 1,
+        "total_outstanding_payables": 94000,
+        "overdue_payables": 0,
+        "bills_due_soon_7d": 68000,
+        "bills_due_8_to_30d": 26000,
+        "open_bills_count": 2,
+        "overdue_bills_count": 0,
+        "bills_due_soon_7d_count": 1,
+        "cash_coverage_warning_active": false,
+        "reporting_periods": {
+          "weekly_oct_12_to_18_2026": {
+            "start_date": "2026-10-12",
+            "end_date": "2026-10-18",
+            "transaction_count": 1,
+            "cash_inflows": 0,
+            "cash_outflows": 30000,
+            "net_cash_flow": -30000
+          },
+          "weekly_oct_05_to_11_2026": {
+            "start_date": "2026-10-05",
+            "end_date": "2026-10-11",
+            "transaction_count": 2,
+            "cash_inflows": 110000,
+            "cash_outflows": 38000,
+            "net_cash_flow": 72000
+          },
+          "monthly_october_2026": {
+            "start_date": "2026-10-01",
+            "end_date": "2026-10-31",
+            "transaction_count": 4,
+            "cash_inflows": 110000,
+            "cash_outflows": 117000,
+            "net_cash_flow": -7000
+          },
+          "monthly_september_2026": {
+            "start_date": "2026-09-01",
+            "end_date": "2026-09-30",
+            "transaction_count": 4,
+            "cash_inflows": 109120,
+            "cash_outflows": 96000,
+            "net_cash_flow": 13120
+          },
+          "fy_2026_27_ytd": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "transaction_count": 12,
+            "cash_inflows": 384120,
+            "cash_outflows": 440500,
+            "net_cash_flow": -56380
+          },
+          "fy_2025_26_full": {
+            "start_date": "2025-04-01",
+            "end_date": "2026-03-31",
+            "transaction_count": 0,
+            "cash_inflows": 0,
+            "cash_outflows": 0,
+            "net_cash_flow": 0
+          }
+        },
+        "customer_intelligence": [
+          {
+            "customer_code": "CUST-C01",
+            "customer_name": "Western Sugar & Distillery Ltd",
+            "status": "ACTIVE",
+            "total_invoiced": 370000,
+            "total_received": 370000,
+            "outstanding_receivable": 0,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 3,
+            "average_delay_days": 5,
+            "median_delay_days": 5,
+            "on_time_payment_rate_pct": 0,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Watch — Payment Delays"
+          },
+          {
+            "customer_code": "CUST-C02",
+            "customer_name": "Koyna Hydro Mechanicals Pvt Ltd",
+            "status": "ACTIVE",
+            "total_invoiced": 125000,
+            "total_received": 0,
+            "outstanding_receivable": 125000,
+            "overdue_receivable": 125000,
+            "max_days_overdue": 3,
+            "completed_eligible_invoices_count": 0,
+            "average_delay_days": null,
+            "median_delay_days": null,
+            "on_time_payment_rate_pct": null,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Watch — Payment Delays"
+          },
+          {
+            "customer_code": "CUST-C03",
+            "customer_name": "Sahyadri Cold Chain Warehousing",
+            "status": "ACTIVE",
+            "total_invoiced": 140000,
+            "total_received": 0,
+            "outstanding_receivable": 140000,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 0,
+            "average_delay_days": null,
+            "median_delay_days": null,
+            "on_time_payment_rate_pct": null,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Insufficient Data"
+          }
+        ],
+        "supplier_intelligence": [
+          {
+            "supplier_code": "SUP-C01",
+            "supplier_name": "Ratnagiri Steel & Plates Traders",
+            "total_billed": 216000,
+            "total_paid": 148000,
+            "outstanding_payable": 68000,
+            "overdue_payable": 0,
+            "bills_due_soon_7d": 68000
+          },
+          {
+            "supplier_code": "SUP-C02",
+            "supplier_name": "ArcWeld Industrial Gases & Consumables",
+            "total_billed": 70000,
+            "total_paid": 44000,
+            "outstanding_payable": 26000,
+            "overdue_payable": 0,
+            "bills_due_soon_7d": 0
+          }
+        ],
+        "risk_simulator_30d": {
+          "horizon_days": 30,
+          "history_span_days": 81,
+          "has_sufficient_history_for_run_rate": true,
+          "daily_operating_inflow_run_rate": 174.32,
+          "daily_operating_outflow_run_rate": 3067.9,
+          "excluded_overdue_over_90d_receivables": 0,
+          "excluded_missing_due_date_receivables": 0,
+          "baseline_projection": {
+            "ending_cash": 162812.6,
+            "minimum_projected_cash": -52996.54,
+            "minimum_cash_day_offset": 13,
+            "projected_shortfall_amount": 52996.54,
+            "first_shortfall_day_offset": 5,
+            "receivables_shifted_beyond_horizon": 0,
+            "receivables_shifted_count": 0
+          },
+          "combined_stress_scenario": {
+            "ending_cash": -328494.8,
+            "minimum_projected_cash": -328494.8,
+            "minimum_cash_day_offset": 30,
+            "projected_shortfall_amount": 328494.8,
+            "first_shortfall_day_offset": 1,
+            "receivables_shifted_beyond_horizon": 265000,
+            "receivables_shifted_count": 2
+          }
+        }
+      }
+    },
+    {
+      "slug": "profile_d_narmada_sparse",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "business_name": "Narmada General Traders",
+      "scenario_title": "Sparse / Newly Onboarded Business (< 14 Days History & Missing Due Dates)",
+      "as_of_date": "2026-10-22",
+      "record_counts": {
+        "categories": 12,
+        "customers": 2,
+        "suppliers": 1,
+        "invoices": 2,
+        "bills": 1,
+        "transactions": 3,
+        "payments": 1
+      },
+      "expected_ground_truth": {
+        "as_of_date": "2026-10-22",
+        "opening_cash_balance": 50000,
+        "opening_balance_date": null,
+        "post_opening_inflows": 22200,
+        "post_opening_outflows": 6500,
+        "pre_opening_historical_inflows": 0,
+        "pre_opening_historical_outflows": 0,
+        "available_cash": 65700,
+        "total_outstanding_receivables": 24000,
+        "overdue_receivables": 0,
+        "missing_due_date_receivables": 24000,
+        "open_invoices_count": 1,
+        "overdue_invoices_count": 0,
+        "total_outstanding_payables": 15000,
+        "overdue_payables": 0,
+        "bills_due_soon_7d": 15000,
+        "bills_due_8_to_30d": 0,
+        "open_bills_count": 1,
+        "overdue_bills_count": 0,
+        "bills_due_soon_7d_count": 1,
+        "cash_coverage_warning_active": false,
+        "reporting_periods": {
+          "weekly_oct_12_to_18_2026": {
+            "start_date": "2026-10-12",
+            "end_date": "2026-10-18",
+            "transaction_count": 2,
+            "cash_inflows": 18000,
+            "cash_outflows": 6500,
+            "net_cash_flow": 11500
+          },
+          "weekly_oct_05_to_11_2026": {
+            "start_date": "2026-10-05",
+            "end_date": "2026-10-11",
+            "transaction_count": 0,
+            "cash_inflows": 0,
+            "cash_outflows": 0,
+            "net_cash_flow": 0
+          },
+          "monthly_october_2026": {
+            "start_date": "2026-10-01",
+            "end_date": "2026-10-31",
+            "transaction_count": 3,
+            "cash_inflows": 22200,
+            "cash_outflows": 6500,
+            "net_cash_flow": 15700
+          },
+          "monthly_september_2026": {
+            "start_date": "2026-09-01",
+            "end_date": "2026-09-30",
+            "transaction_count": 0,
+            "cash_inflows": 0,
+            "cash_outflows": 0,
+            "net_cash_flow": 0
+          },
+          "fy_2026_27_ytd": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "transaction_count": 3,
+            "cash_inflows": 22200,
+            "cash_outflows": 6500,
+            "net_cash_flow": 15700
+          },
+          "fy_2025_26_full": {
+            "start_date": "2025-04-01",
+            "end_date": "2026-03-31",
+            "transaction_count": 0,
+            "cash_inflows": 0,
+            "cash_outflows": 0,
+            "net_cash_flow": 0
+          }
+        },
+        "customer_intelligence": [
+          {
+            "customer_code": "CUST-D01",
+            "customer_name": "Tapi Kirana & Provision Store",
+            "status": "ACTIVE",
+            "total_invoiced": 18000,
+            "total_received": 18000,
+            "outstanding_receivable": 0,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 1,
+            "average_delay_days": null,
+            "median_delay_days": null,
+            "on_time_payment_rate_pct": null,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Insufficient Data"
+          },
+          {
+            "customer_code": "CUST-D02",
+            "customer_name": "Maheshwar Handloom Emporium",
+            "status": "ACTIVE",
+            "total_invoiced": 24000,
+            "total_received": 0,
+            "outstanding_receivable": 24000,
+            "overdue_receivable": 0,
+            "max_days_overdue": 0,
+            "completed_eligible_invoices_count": 0,
+            "average_delay_days": null,
+            "median_delay_days": null,
+            "on_time_payment_rate_pct": null,
+            "recent_delay_trend": "INSUFFICIENT_HISTORY",
+            "collection_risk_indicator": "Insufficient Data"
+          }
+        ],
+        "supplier_intelligence": [
+          {
+            "supplier_code": "SUP-D01",
+            "supplier_name": "Indore Wholesale Staples Mart",
+            "total_billed": 15000,
+            "total_paid": 0,
+            "outstanding_payable": 15000,
+            "overdue_payable": 0,
+            "bills_due_soon_7d": 15000
+          }
+        ],
+        "risk_simulator_30d": {
+          "horizon_days": 30,
+          "history_span_days": 9,
+          "has_sufficient_history_for_run_rate": false,
+          "daily_operating_inflow_run_rate": 0,
+          "daily_operating_outflow_run_rate": 0,
+          "excluded_overdue_over_90d_receivables": 0,
+          "excluded_missing_due_date_receivables": 24000,
+          "baseline_projection": {
+            "ending_cash": 50700,
+            "minimum_projected_cash": 50700,
+            "minimum_cash_day_offset": 5,
+            "projected_shortfall_amount": 0,
+            "first_shortfall_day_offset": null,
+            "receivables_shifted_beyond_horizon": 0,
+            "receivables_shifted_count": 0
+          },
+          "combined_stress_scenario": {
+            "ending_cash": -174300,
+            "minimum_projected_cash": -174300,
+            "minimum_cash_day_offset": 5,
+            "projected_shortfall_amount": 174300,
+            "first_shortfall_day_offset": 1,
+            "receivables_shifted_beyond_horizon": 0,
+            "receivables_shifted_count": 0
+          }
+        }
+      }
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_a_kaveri_packaging/workspace_bundle.json",
+      "bytes": 147741,
+      "sha256": "c8916e9b1537928251ba7f74aacc2cee9191edab99e242fb7ebe58b7215f9ab8"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_a_kaveri_packaging/customers.csv",
+      "bytes": 2832,
+      "sha256": "25ba50422beb990eea17ecfff6520f25dcb7ccef849f0284781c1cf8e7c98b53"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_a_kaveri_packaging/suppliers.csv",
+      "bytes": 1769,
+      "sha256": "aaaed32950c36ceb91381b4d3c91cab312ba8ab23b1b25906dd34b4d5d2b7baa"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_a_kaveri_packaging/invoices.csv",
+      "bytes": 12078,
+      "sha256": "9ef76d970b056f2f1f9649e508ebf0504d32f59aa372b2441684e2a46229841d"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_a_kaveri_packaging/bills.csv",
+      "bytes": 5334,
+      "sha256": "8f4610d50e0097e1ccbd099d47782cbb03e2f9656bfdb37f343cd2cbc3308322"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_a_kaveri_packaging/transactions.csv",
+      "bytes": 27368,
+      "sha256": "7f2b9560b1259801eb7198d9637b6c3c9760b07eac3dfb21e3eec73c1bca1f1f"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_a_kaveri_packaging/payments.csv",
+      "bytes": 9187,
+      "sha256": "fa82c69c51a51f55417d7069a4d933b067f8e8b80690e0c8c46b3874f5fe7876"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_b_vindhya_electricals/workspace_bundle.json",
+      "bytes": 57338,
+      "sha256": "69f3c050d2126750ee8566a39281b69af001d22a5abe5bcf9c82500ac6922194"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_b_vindhya_electricals/customers.csv",
+      "bytes": 1387,
+      "sha256": "9bed2014fefee85748919b9dddd757373e9aee5e7f6b6efd2ce9d89250812bfd"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_b_vindhya_electricals/suppliers.csv",
+      "bytes": 1026,
+      "sha256": "c21e8271f3b5cc814eb3ff685e89765af043d8d94a30eb3a1edacad999eb420c"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_b_vindhya_electricals/invoices.csv",
+      "bytes": 4907,
+      "sha256": "24acc1d3504016a4ed738354e575da0a402e706b6ae53487c2694eb521b31938"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_b_vindhya_electricals/bills.csv",
+      "bytes": 2200,
+      "sha256": "bed764f02a908c0bbcba5d1f358c365781632ccc7ddbb20c2730d967ebd1410f"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_b_vindhya_electricals/transactions.csv",
+      "bytes": 8537,
+      "sha256": "4b651bb9f00d2a33b48e4508df636bc0abbd3f61849cbc478c460249eb97f9d0"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_b_vindhya_electricals/payments.csv",
+      "bytes": 3212,
+      "sha256": "9658eac933f871835e92e463d87c477e4b6f36431557b4415cbcf0eb7c17e8f9"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_c_sahyadri_fab_irregular/workspace_bundle.json",
+      "bytes": 35569,
+      "sha256": "05eb65e72417eed3813ac4144e55f6e368525b299bed01c669b362f6839748f1"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_c_sahyadri_fab_irregular/customers.csv",
+      "bytes": 1015,
+      "sha256": "bc48ce55a946a70af2ef784efec6c60259cbcde8aa7bdbef972621ea8ef6f0ba"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_c_sahyadri_fab_irregular/suppliers.csv",
+      "bytes": 713,
+      "sha256": "47b64ddb88950128605499161f6a265ed3547abce1a2652ac49a22345a7b0186"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_c_sahyadri_fab_irregular/invoices.csv",
+      "bytes": 2163,
+      "sha256": "c539aefe3f36ed22c38379ecc41b6908dbc4dddd3ba306cac48c04ac7f8e289d"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_c_sahyadri_fab_irregular/bills.csv",
+      "bytes": 1849,
+      "sha256": "855ded660089857adfb685dd96b663f226997be7408832f03155ab2af6e163c5"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_c_sahyadri_fab_irregular/transactions.csv",
+      "bytes": 5044,
+      "sha256": "d186435e4142a2a68f78dd4e4d8233ac333c458488281d8887ade26d0f41252f"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_c_sahyadri_fab_irregular/payments.csv",
+      "bytes": 1324,
+      "sha256": "aeee91bf97c18cf59394c93eb7cad9f1e9f1f1d85b70121c78035cfcd302a00c"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_d_narmada_sparse/workspace_bundle.json",
+      "bytes": 17130,
+      "sha256": "e368c94136c4202c28a4608e054082c1d88c8c237d4273a0cfe76c46126e8d14"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_d_narmada_sparse/customers.csv",
+      "bytes": 725,
+      "sha256": "d4158f839e794f79941c94d622904079713e98878e5c09b6206366ab0b090342"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_d_narmada_sparse/suppliers.csv",
+      "bytes": 395,
+      "sha256": "d5933d95b5a8a64750173f50d0a1f50f2f1c99a9de1ed39effa797095acd24c6"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_d_narmada_sparse/invoices.csv",
+      "bytes": 1006,
+      "sha256": "809e15d5973153f8b5ed882fbb297655807c28692621f38d276c13d2b99bb9ba"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_d_narmada_sparse/bills.csv",
+      "bytes": 650,
+      "sha256": "484a7aca7a4a47c94bebd104683389393e41d501ac55537deb73c3aeca87a324"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_d_narmada_sparse/transactions.csv",
+      "bytes": 1368,
+      "sha256": "35069f50a34fb46a6f138bb9f84691d1a5222181054eca57b8fc3de4713756e9"
+    },
+    {
+      "path": "datasets/synthetic/business_scenarios/profile_d_narmada_sparse/payments.csv",
+      "bytes": 379,
+      "sha256": "a98c9d391029f46bd389cc5810fc6f941072003a6a2d5e6869a6275a4110fe90"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/templates/flowtrust_transactions_template.csv",
+      "bytes": 123,
+      "sha256": "fcee098c8e9d49b1eecc29f9fb5311bf4800fff10cc84593e706cb8df3296f67"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/templates/bank_statement_export_template.csv",
+      "bytes": 55,
+      "sha256": "6d9358ca3adc9bbb5b3835b5ab760512407c276ebac26981a1bfeda8040ccf93"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/templates/flowtrust_documents_template.csv",
+      "bytes": 173,
+      "sha256": "c41f7618eb080779f2fbd9e3c993eb0c2b7e05d49aa85dcf2f366acbfe49cef0"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/profile_a_kaveri_packaging_transactions.csv",
+      "bytes": 9970,
+      "sha256": "d97ab8ef703427fee0c0934aadddce0269db1c8bfc3aeb0cbae5629195aa9f35"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/profile_a_kaveri_packaging_bank_statement.csv",
+      "bytes": 4555,
+      "sha256": "45f82ada7ba2e206aaf170e97b766d91c97f14c4c03848e9fa4a9aafb4081c9e"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/profile_a_kaveri_packaging_documents.csv",
+      "bytes": 8442,
+      "sha256": "506ff6fadb5b600254d2451c8e6ec925e1b010d8a42c4831388e7eb5c760d14c"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/profile_b_vindhya_electricals_transactions.csv",
+      "bytes": 3157,
+      "sha256": "14faff82dfdf9b4e203ccd7ad1b0784491b1b7548ee9de856d1fa562d5f27a44"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/profile_b_vindhya_electricals_bank_statement.csv",
+      "bytes": 2097,
+      "sha256": "dc584c79073ae35ddb96432a1e37aa0c7a6b7c0a551926ed9476923eb32bddb0"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/profile_b_vindhya_electricals_documents.csv",
+      "bytes": 3333,
+      "sha256": "2b5d7daae8d938cca18f9749eeca3c7dc852c15061ea529d72c8b635d5c5046d"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/profile_c_sahyadri_fab_transactions.csv",
+      "bytes": 1876,
+      "sha256": "859107d542eb072817dd29bc367281c557d64aed8b6fe7f6d2c5e56e9b2181ac"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/profile_c_sahyadri_fab_documents.csv",
+      "bytes": 1895,
+      "sha256": "98a912ae12f8852f07f1bd274915eeaf58d5e7ed7c72bdc33172d700e84e4005"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/profile_d_narmada_sparse_transactions.csv",
+      "bytes": 460,
+      "sha256": "186c94795512d65f5400e65e7501d821bdc1d35c2dabfa9532e71cf12459c69b"
+    },
+    {
+      "path": "datasets/synthetic/csv_import/profile_d_narmada_sparse_documents.csv",
+      "bytes": 695,
+      "sha256": "790816680a5fa4bf7e11662161faccccddecc36cbbc9eb7163e1665a8ff5c64b"
+    },
+    {
+      "path": "datasets/synthetic/edge_cases/fixture_01_empty_file.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "datasets/synthetic/edge_cases/fixture_02_headers_only.csv",
+      "bytes": 123,
+      "sha256": "fcee098c8e9d49b1eecc29f9fb5311bf4800fff10cc84593e706cb8df3296f67"
+    },
+    {
+      "path": "datasets/synthetic/edge_cases/fixture_03_missing_required_columns.csv",
+      "bytes": 150,
+      "sha256": "2c35304a45ec71b8b7e82f717a3cdff5d212ecb70bf530b8e8f54b05c94e8248"
+    },
+    {
+      "path": "datasets/synthetic/edge_cases/fixture_04_malformed_dates_and_amounts.csv",
+      "bytes": 659,
+      "sha256": "c6b83a15d1dc8522bb1ca3ac0118639a8c50a52f69bda84bba2bc3c0cf272771"
+    },
+    {
+      "path": "datasets/synthetic/edge_cases/fixture_05_bank_debit_credit_conflict_and_markers.csv",
+      "bytes": 363,
+      "sha256": "ec2ec875b51b6e4d1776547ad712ac2a7eb4786ddd2cd7b44442db8b099599e7"
+    },
+    {
+      "path": "datasets/synthetic/edge_cases/fixture_06_mixed_date_formats.csv",
+      "bytes": 311,
+      "sha256": "baa15ea23c637cde2d903cd2e5570f277ae7bc41f84f553431185714b059be48"
+    },
+    {
+      "path": "datasets/synthetic/edge_cases/fixture_07_duplicates_and_reimport.csv",
+      "bytes": 723,
+      "sha256": "5f1f870355be5d459b66481957c6b0f2953092d66ae95c06217461fc5da663b5"
+    },
+    {
+      "path": "datasets/synthetic/edge_cases/fixture_08_inconsistent_documents.csv",
+      "bytes": 968,
+      "sha256": "59a2cb8fc0578a1f570fc4521a3e9bf3b1f437eeff13cb8abdeb063d294bae77"
+    },
+    {
+      "path": "datasets/synthetic/edge_cases/expected_validation_outcomes.json",
+      "bytes": 4489,
+      "sha256": "9fa7a6f2f35464a512716e0e80bdd35a1174450d7978f783f9ba541d702dc1ab"
+    }
+  ]
+}

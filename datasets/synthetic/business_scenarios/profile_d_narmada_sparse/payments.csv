@@ -1,0 +1,2 @@
+id,business_id,transaction_id,target_type,invoice_id,bill_id,document_number,payment_date,allocated_amount,payment_reference,status,created_at
+6e26acdf-0c80-4f21-9db3-7885375747a9,b3910724-3a42-4d7d-a5a3-02b55636b1a9,0bab4069-b50c-4c36-b4d0-c5811638df48,INVOICE,7b862283-cbc7-46b6-94fa-b183b7080e2c,,INV-D26-001,2026-10-18,18000.00,UTR-SYNTH-D001,ACTIVE,2026-10-22T09:00:00.000Z

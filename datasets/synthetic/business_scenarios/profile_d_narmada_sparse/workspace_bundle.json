@@ -1,0 +1,479 @@
+{
+  "metadata": {
+    "generator_version": "1.0.0",
+    "anchor_date": "2026-10-22",
+    "synthetic_disclaimer": "SYNTHETIC DEMONSTRATION DATASET — Fictional business and financial records generated for FlowTrust demonstration and automated testing. Contains zero real personal or business data."
+  },
+  "business": {
+    "id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+    "slug": "profile_d_narmada_sparse",
+    "scenario_title": "Sparse / Newly Onboarded Business (< 14 Days History & Missing Due Dates)",
+    "scenario_summary": "Newly onboarded wholesale trader with only 11 days of transaction history (2026-10-12 to 2026-10-22), unset opening_balance_date, customers below the N=3 completed-invoice threshold, and an open invoice with due_date = NULL.",
+    "demonstrated_capabilities": [
+      "Sparse history (< 14 days) triggering honest Insufficient Data states in Risk Simulator run-rate and Reports prior-period comparisons",
+      "Customer Intelligence N < 3 sample-size gating (`average_delay_days = null`, `collection_risk_indicator = \"Insufficient Data\"`)",
+      "Open invoice with `due_date = null` included in `Total Outstanding Receivables` but excluded from `Overdue Receivables` and Risk Simulator scheduled inflows with explicit disclosure"
+    ],
+    "name": "Narmada General Traders",
+    "currency_code": "INR",
+    "timezone": "Asia/Kolkata",
+    "join_code": "NRM-2026-NEWB",
+    "join_code_generated_at": "2026-10-22T09:00:00.000Z",
+    "opening_cash_balance": 50000,
+    "opening_balance_date": null,
+    "opening_receivables_balance": 0,
+    "opening_payables_balance": 0,
+    "target_cash_buffer": null,
+    "is_demo": true,
+    "as_of_date": "2026-10-22",
+    "created_at": "2026-10-22T09:00:00.000Z",
+    "updated_at": "2026-10-22T09:00:00.000Z"
+  },
+  "categories": [
+    {
+      "id": "4b4d1879-303b-41e7-8fff-0398afc1f38d",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Sales",
+      "direction": "INFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "f5391485-0903-4bbf-a6e4-05b21961a1db",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Service Revenue",
+      "direction": "INFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "5104595d-6960-42c7-b341-95fdee7afc7b",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Other Income",
+      "direction": "INFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "a3c36362-20a6-4d65-b978-b10f3af64625",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Rent",
+      "direction": "OUTFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "d182c4cd-8bde-4bbd-bce1-f253671f5a9d",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Salaries",
+      "direction": "OUTFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "f4b267ca-de75-4eda-bab2-5387efd1c365",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Utilities",
+      "direction": "OUTFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "0787c7a6-4f1a-4b4f-a081-a16e6fcfc752",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Inventory Purchases",
+      "direction": "OUTFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "c6d931b2-130c-4840-b6e9-66bf9956491d",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Marketing",
+      "direction": "OUTFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "c5939511-a087-4d02-8563-0ac91e79592d",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Transportation",
+      "direction": "OUTFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "e4b86e72-60d6-4b34-a97e-ccfec263ff14",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Software & Subscriptions",
+      "direction": "OUTFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "be07af8a-330d-4093-b552-ceb4129f4646",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Taxes",
+      "direction": "OUTFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    },
+    {
+      "id": "b0c09863-f5d7-4b51-a0f0-805907e431e3",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "name": "Other Expenses",
+      "direction": "OUTFLOW",
+      "is_system_default": true,
+      "is_archived": false
+    }
+  ],
+  "customers": [
+    {
+      "id": "1532e3fd-bb60-4153-9d28-e01512a8e229",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "external_code": "CUST-D01",
+      "name": "Tapi Kirana & Provision Store",
+      "email": "orders.tapikirana@example.com",
+      "phone": "+91-90000-00601",
+      "address": "Main Bazaar, Burhanpur, Madhya Pradesh 450331",
+      "notes": "Only 1 completed invoice (N=1 < 3).",
+      "status": "ACTIVE",
+      "created_at": "2026-10-22T09:00:00.000Z",
+      "updated_at": "2026-10-22T09:00:00.000Z"
+    },
+    {
+      "id": "77a663ca-49f3-4d7a-bc29-a70c0decb9bd",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "external_code": "CUST-D02",
+      "name": "Maheshwar Handloom Emporium",
+      "email": "accounts.maheshwar@example.com",
+      "phone": "+91-90000-00602",
+      "address": "Fort Road, Maheshwar, Madhya Pradesh 451224",
+      "notes": "0 completed invoices (N=0); 1 open invoice missing a contractual due_date.",
+      "status": "ACTIVE",
+      "created_at": "2026-10-22T09:00:00.000Z",
+      "updated_at": "2026-10-22T09:00:00.000Z"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "531b03f5-3fdb-4f4c-b40e-7d9ebf9ddb2f",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "external_code": "SUP-D01",
+      "name": "Indore Wholesale Staples Mart",
+      "email": "billing.indorestaples@example.com",
+      "phone": "+91-90000-00701",
+      "address": "Siyaganj Wholesale Market, Indore, Madhya Pradesh 452007",
+      "notes": "Initial inventory supplier.",
+      "status": "ACTIVE",
+      "created_at": "2026-10-22T09:00:00.000Z",
+      "updated_at": "2026-10-22T09:00:00.000Z"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "7b862283-cbc7-46b6-94fa-b183b7080e2c",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "customer_id": "1532e3fd-bb60-4153-9d28-e01512a8e229",
+      "customer_code": "CUST-D01",
+      "customer_name": "Tapi Kirana & Provision Store",
+      "document_number": "INV-D26-001",
+      "issue_date": "2026-10-12",
+      "due_date": "2026-10-19",
+      "category_id": "4b4d1879-303b-41e7-8fff-0398afc1f38d",
+      "category_name": "Sales",
+      "total_amount": 18000,
+      "amount_paid": 18000,
+      "outstanding_amount": 0,
+      "status": "PAID",
+      "is_overdue": false,
+      "days_overdue": 0,
+      "cancelled_at": null,
+      "cancellation_reason": null,
+      "description": "Initial wholesale carton supply (Settled; N=1 < 3 threshold)",
+      "created_at": "2026-10-22T09:00:00.000Z",
+      "updated_at": "2026-10-22T09:00:00.000Z"
+    },
+    {
+      "id": "079244f6-e1ea-40fd-9494-bd5593859ef8",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "customer_id": "77a663ca-49f3-4d7a-bc29-a70c0decb9bd",
+      "customer_code": "CUST-D02",
+      "customer_name": "Maheshwar Handloom Emporium",
+      "document_number": "INV-D26-002",
+      "issue_date": "2026-10-19",
+      "due_date": null,
+      "category_id": "4b4d1879-303b-41e7-8fff-0398afc1f38d",
+      "category_name": "Sales",
+      "total_amount": 24000,
+      "amount_paid": 0,
+      "outstanding_amount": 24000,
+      "status": "UNPAID",
+      "is_overdue": false,
+      "days_overdue": 0,
+      "cancelled_at": null,
+      "cancellation_reason": null,
+      "description": "Open invoice with missing due_date (tests NULL due_date handling)",
+      "created_at": "2026-10-22T09:00:00.000Z",
+      "updated_at": "2026-10-22T09:00:00.000Z"
+    }
+  ],
+  "bills": [
+    {
+      "id": "b39b0669-bc53-48ef-8a79-b2f751f19e57",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "supplier_id": "531b03f5-3fdb-4f4c-b40e-7d9ebf9ddb2f",
+      "supplier_code": "SUP-D01",
+      "supplier_name": "Indore Wholesale Staples Mart",
+      "document_number": "BILL-D26-001",
+      "issue_date": "2026-10-15",
+      "due_date": "2026-10-27",
+      "category_id": "0787c7a6-4f1a-4b4f-a081-a16e6fcfc752",
+      "category_name": "Inventory Purchases",
+      "total_amount": 15000,
+      "amount_paid": 0,
+      "outstanding_amount": 15000,
+      "status": "UNPAID",
+      "is_overdue": false,
+      "days_overdue": 0,
+      "is_due_soon_7d": true,
+      "cancelled_at": null,
+      "cancellation_reason": null,
+      "description": "Initial stock purchase bill (Due in 5d)",
+      "created_at": "2026-10-22T09:00:00.000Z",
+      "updated_at": "2026-10-22T09:00:00.000Z"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "2a9f6b20-16a9-414c-aea1-ed287788b593",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "transaction_date": "2026-10-14",
+      "direction": "OUTFLOW",
+      "transaction_kind": "DIRECT_EXPENSE",
+      "amount": 6500,
+      "payment_account": "BANK",
+      "category_id": "a3c36362-20a6-4d65-b978-b10f3af64625",
+      "category_name": "Rent",
+      "description": "Shop advance rent - October 2026",
+      "counterparty_type": null,
+      "customer_id": null,
+      "supplier_id": null,
+      "counterparty_name": null,
+      "counterparty_code": null,
+      "document_number": null,
+      "external_reference": "UTR-SYNTH-DD001",
+      "is_pre_opening_cutoff": false,
+      "dedup_fingerprint": "eb51cee34cc956006e19158d8a8ac4624fa8e6ca52874bcdc34b97c9fe55ad32",
+      "status": "ACTIVE",
+      "created_at": "2026-10-22T09:00:00.000Z"
+    },
+    {
+      "id": "0bab4069-b50c-4c36-b4d0-c5811638df48",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "transaction_date": "2026-10-18",
+      "direction": "INFLOW",
+      "transaction_kind": "INVOICE_PAYMENT",
+      "amount": 18000,
+      "payment_account": "BANK",
+      "category_id": "4b4d1879-303b-41e7-8fff-0398afc1f38d",
+      "category_name": "Sales",
+      "description": "Payment received against INV-D26-001 - Tapi Kirana & Provision Store",
+      "counterparty_type": "CUSTOMER",
+      "customer_id": "1532e3fd-bb60-4153-9d28-e01512a8e229",
+      "supplier_id": null,
+      "counterparty_name": "Tapi Kirana & Provision Store",
+      "counterparty_code": "CUST-D01",
+      "document_number": "INV-D26-001",
+      "external_reference": "UTR-SYNTH-D001",
+      "is_pre_opening_cutoff": false,
+      "dedup_fingerprint": "d87831063d585423718ac4b9a0e486d82578fa35f9aeb1c9e09e41bf05761893",
+      "status": "ACTIVE",
+      "created_at": "2026-10-22T09:00:00.000Z"
+    },
+    {
+      "id": "e5b1999e-6b26-492e-96a6-aa646d898012",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "transaction_date": "2026-10-22",
+      "direction": "INFLOW",
+      "transaction_kind": "DIRECT_INCOME",
+      "amount": 4200,
+      "payment_account": "CASH",
+      "category_id": "4b4d1879-303b-41e7-8fff-0398afc1f38d",
+      "category_name": "Sales",
+      "description": "Counter cash sales",
+      "counterparty_type": null,
+      "customer_id": null,
+      "supplier_id": null,
+      "counterparty_name": null,
+      "counterparty_code": null,
+      "document_number": null,
+      "external_reference": "CASH-SYNTH-D001",
+      "is_pre_opening_cutoff": false,
+      "dedup_fingerprint": "35d1c9c5cdea6d11f0ed012848f04080167d1bc65105df508aee539260fb5ce7",
+      "status": "ACTIVE",
+      "created_at": "2026-10-22T09:00:00.000Z"
+    }
+  ],
+  "payments": [
+    {
+      "id": "6e26acdf-0c80-4f21-9db3-7885375747a9",
+      "business_id": "b3910724-3a42-4d7d-a5a3-02b55636b1a9",
+      "transaction_id": "0bab4069-b50c-4c36-b4d0-c5811638df48",
+      "target_type": "INVOICE",
+      "invoice_id": "7b862283-cbc7-46b6-94fa-b183b7080e2c",
+      "bill_id": null,
+      "document_number": "INV-D26-001",
+      "payment_date": "2026-10-18",
+      "allocated_amount": 18000,
+      "payment_reference": "UTR-SYNTH-D001",
+      "status": "ACTIVE",
+      "created_at": "2026-10-22T09:00:00.000Z"
+    }
+  ],
+  "expected_ground_truth": {
+    "as_of_date": "2026-10-22",
+    "opening_cash_balance": 50000,
+    "opening_balance_date": null,
+    "post_opening_inflows": 22200,
+    "post_opening_outflows": 6500,
+    "pre_opening_historical_inflows": 0,
+    "pre_opening_historical_outflows": 0,
+    "available_cash": 65700,
+    "total_outstanding_receivables": 24000,
+    "overdue_receivables": 0,
+    "missing_due_date_receivables": 24000,
+    "open_invoices_count": 1,
+    "overdue_invoices_count": 0,
+    "total_outstanding_payables": 15000,
+    "overdue_payables": 0,
+    "bills_due_soon_7d": 15000,
+    "bills_due_8_to_30d": 0,
+    "open_bills_count": 1,
+    "overdue_bills_count": 0,
+    "bills_due_soon_7d_count": 1,
+    "cash_coverage_warning_active": false,
+    "reporting_periods": {
+      "weekly_oct_12_to_18_2026": {
+        "start_date": "2026-10-12",
+        "end_date": "2026-10-18",
+        "transaction_count": 2,
+        "cash_inflows": 18000,
+        "cash_outflows": 6500,
+        "net_cash_flow": 11500
+      },
+      "weekly_oct_05_to_11_2026": {
+        "start_date": "2026-10-05",
+        "end_date": "2026-10-11",
+        "transaction_count": 0,
+        "cash_inflows": 0,
+        "cash_outflows": 0,
+        "net_cash_flow": 0
+      },
+      "monthly_october_2026": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-31",
+        "transaction_count": 3,
+        "cash_inflows": 22200,
+        "cash_outflows": 6500,
+        "net_cash_flow": 15700
+      },
+      "monthly_september_2026": {
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-30",
+        "transaction_count": 0,
+        "cash_inflows": 0,
+        "cash_outflows": 0,
+        "net_cash_flow": 0
+      },
+      "fy_2026_27_ytd": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "transaction_count": 3,
+        "cash_inflows": 22200,
+        "cash_outflows": 6500,
+        "net_cash_flow": 15700
+      },
+      "fy_2025_26_full": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "transaction_count": 0,
+        "cash_inflows": 0,
+        "cash_outflows": 0,
+        "net_cash_flow": 0
+      }
+    },
+    "customer_intelligence": [
+      {
+        "customer_code": "CUST-D01",
+        "customer_name": "Tapi Kirana & Provision Store",
+        "status": "ACTIVE",
+        "total_invoiced": 18000,
+        "total_received": 18000,
+        "outstanding_receivable": 0,
+        "overdue_receivable": 0,
+        "max_days_overdue": 0,
+        "completed_eligible_invoices_count": 1,
+        "average_delay_days": null,
+        "median_delay_days": null,
+        "on_time_payment_rate_pct": null,
+        "recent_delay_trend": "INSUFFICIENT_HISTORY",
+        "collection_risk_indicator": "Insufficient Data"
+      },
+      {
+        "customer_code": "CUST-D02",
+        "customer_name": "Maheshwar Handloom Emporium",
+        "status": "ACTIVE",
+        "total_invoiced": 24000,
+        "total_received": 0,
+        "outstanding_receivable": 24000,
+        "overdue_receivable": 0,
+        "max_days_overdue": 0,
+        "completed_eligible_invoices_count": 0,
+        "average_delay_days": null,
+        "median_delay_days": null,
+        "on_time_payment_rate_pct": null,
+        "recent_delay_trend": "INSUFFICIENT_HISTORY",
+        "collection_risk_indicator": "Insufficient Data"
+      }
+    ],
+    "supplier_intelligence": [
+      {
+        "supplier_code": "SUP-D01",
+        "supplier_name": "Indore Wholesale Staples Mart",
+        "total_billed": 15000,
+        "total_paid": 0,
+        "outstanding_payable": 15000,
+        "overdue_payable": 0,
+        "bills_due_soon_7d": 15000
+      }
+    ],
+    "risk_simulator_30d": {
+      "horizon_days": 30,
+      "history_span_days": 9,
+      "has_sufficient_history_for_run_rate": false,
+      "daily_operating_inflow_run_rate": 0,
+      "daily_operating_outflow_run_rate": 0,
+      "excluded_overdue_over_90d_receivables": 0,
+      "excluded_missing_due_date_receivables": 24000,
+      "baseline_projection": {
+        "ending_cash": 50700,
+        "minimum_projected_cash": 50700,
+        "minimum_cash_day_offset": 5,
+        "projected_shortfall_amount": 0,
+        "first_shortfall_day_offset": null,
+        "receivables_shifted_beyond_horizon": 0,
+        "receivables_shifted_count": 0
+      },
+      "combined_stress_scenario": {
+        "ending_cash": -174300,
+        "minimum_projected_cash": -174300,
+        "minimum_cash_day_offset": 5,
+        "projected_shortfall_amount": 174300,
+        "first_shortfall_day_offset": 1,
+        "receivables_shifted_beyond_horizon": 0,
+        "receivables_shifted_count": 0
+      }
+    }
+  }
+}

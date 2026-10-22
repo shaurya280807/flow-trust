@@ -1,0 +1,3 @@
+id,business_id,external_code,name,email,phone,address,notes,status,created_at,updated_at
+1714133e-a13e-4efc-b762-65d7507239a3,aadbb27e-a740-402d-9de9-55167cc3076e,SUP-C01,Ratnagiri Steel & Plates Traders,sales.ratnagiristeel@example.com,+91-90000-00501,"Shiroli MIDC, Kolhapur, Maharashtra 416122","MS plate, channel, and I-beam supplier.",ACTIVE,2026-10-22T09:00:00.000Z,2026-10-22T09:00:00.000Z
+246c1069-8c66-4627-ab9f-d54d7cf78487,aadbb27e-a740-402d-9de9-55167cc3076e,SUP-C02,ArcWeld Industrial Gases & Consumables,orders.arcweld@example.com,+91-90000-00502,"Kupwad MIDC, Sangli, Maharashtra 416436","Argon/CO2 cylinders, MIG wire, and grinding discs.",ACTIVE,2026-10-22T09:00:00.000Z,2026-10-22T09:00:00.000Z

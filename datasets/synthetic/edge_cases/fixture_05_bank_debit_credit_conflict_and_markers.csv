@@ -1,0 +1,5 @@
+date,narration,debit,credit,chq_ref_no,closing_balance
+01/10/2026,Opening Balance B/F,,,OB-2026-10,340000.00
+05/10/2026,NEFT Cr Sahyadri Foods Pvt Ltd,,85000.00,UTR-SYNTH-ERR501,425000.00
+07/10/2026,Conflicting debit and credit row,15000.00,15000.00,UTR-SYNTH-ERR502,425000.00
+10/10/2026,Self Cash Withdrawal ATM MIDC Bhosari,10000.00,,UTR-SYNTH-ERR503,415000.00

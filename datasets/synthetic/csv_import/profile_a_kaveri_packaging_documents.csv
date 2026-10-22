@@ -1,0 +1,47 @@
+document_type,document_number,counterparty_name,counterparty_code,issue_date,due_date,total_amount,amount_paid,settlement_date,payment_reference,category,status,description
+INVOICE,INV-2025-001,Sahyadri Foods Pvt Ltd,CUST-001,2025-06-10,2025-06-25,80000.00,80000.00,2025-06-24,UTR-SYNTH-A2501,Sales,PAID,5-ply corrugated master cartons (Batch FY25-Q1)
+INVOICE,INV-2025-002,Sahyadri Foods Pvt Ltd,CUST-001,2025-10-05,2025-10-20,95000.00,95000.00,2025-10-18,UTR-SYNTH-A2502,Sales,PAID,Festive snack display boxes (Batch FY25-Q3)
+INVOICE,INV-2026-001,Sahyadri Foods Pvt Ltd,CUST-001,2026-04-02,2026-04-17,75000.00,75000.00,2026-04-16,UTR-SYNTH-A2601,Sales,PAID,Printed laminated food cartons (April lot)
+INVOICE,INV-2026-005,Sahyadri Foods Pvt Ltd,CUST-001,2026-05-15,2026-05-30,90000.00,90000.00,2026-05-28,UTR-SYNTH-A2605,Sales,PAID,Corrugated shipper boxes 12000 units
+INVOICE,INV-2026-010,Sahyadri Foods Pvt Ltd,CUST-001,2026-07-18,2026-08-02,110000.00,110000.00,2026-08-01,UTR-SYNTH-A2610,Sales,PAID,Moisture-resistant export cartons
+INVOICE,INV-2026-016,Sahyadri Foods Pvt Ltd,CUST-001,2026-09-12,2026-09-27,105000.00,105000.00,2026-09-25,UTR-SYNTH-A2616,Sales,PAID,Diwali gift pack outer cartons
+INVOICE,INV-2026-021,Sahyadri Foods Pvt Ltd,CUST-001,2026-10-12,2026-10-27,75000.00,0.00,,,Sales,UNPAID,Q3 replenishment corrugated trays (Open - Due in 5d)
+INVOICE,INV-2025-003,Deccan Beverages LLP,CUST-002,2025-08-10,2025-08-25,65000.00,65000.00,2025-08-25,UTR-SYNTH-A2503,Sales,PAID,24-bottle partition cartons (FY25)
+INVOICE,INV-2025-004,Deccan Beverages LLP,CUST-002,2025-12-05,2025-12-20,70000.00,70000.00,2025-12-20,UTR-SYNTH-A2504,Sales,PAID,Beverage wrap-around trays (FY25)
+INVOICE,INV-2026-002,Deccan Beverages LLP,CUST-002,2026-04-04,2026-04-19,60000.00,60000.00,2026-04-19,UTR-SYNTH-A2602,Sales,PAID,Summer beverage bottle carriers
+INVOICE,INV-2026-006,Deccan Beverages LLP,CUST-002,2026-05-20,2026-06-04,85000.00,85000.00,2026-06-13,UTR-SYNTH-A2606,Sales,PAID,Heavy-duty bottle crate dividers
+INVOICE,INV-2026-011,Deccan Beverages LLP,CUST-002,2026-07-22,2026-08-06,95000.00,95000.00,2026-08-20,UTR-SYNTH-A2611A;UTR-SYNTH-A2611B,Sales,PAID,Monsoon batch corrugated cases (settled in 2 instalments)
+INVOICE,INV-2026-017,Deccan Beverages LLP,CUST-002,2026-08-28,2026-09-12,80000.00,80000.00,2026-09-26,UTR-SYNTH-A2617,Sales,PAID,PET bottle multipack cartons
+INVOICE,INV-2026-022,Deccan Beverages LLP,CUST-002,2026-09-25,2026-10-10,25000.00,0.00,,,Sales,UNPAID,Custom die-cut promotional neck-hangers (12 days overdue)
+INVOICE,INV-2025-005,Malwa Agro Exports Pvt Ltd,CUST-003,2025-11-10,2025-11-25,70000.00,70000.00,2025-12-15,UTR-SYNTH-A2505,Sales,PAID,Ventilated pomegranate export boxes (FY25)
+INVOICE,INV-2026-003,Malwa Agro Exports Pvt Ltd,CUST-003,2026-03-10,2026-03-25,60000.00,60000.00,2026-03-25,UTR-SYNTH-A2603,Sales,PAID,Grapes export telescopic cartons (FY25-Q4)
+INVOICE,INV-2026-007,Malwa Agro Exports Pvt Ltd,CUST-003,2026-05-25,2026-06-09,85000.00,85000.00,2026-07-04,UTR-SYNTH-A2607,Sales,PAID,Alphonso mango export crates
+INVOICE,INV-2026-012,Malwa Agro Exports Pvt Ltd,CUST-003,2026-07-05,2026-07-20,75000.00,75000.00,2026-08-17,UTR-SYNTH-A2612,Sales,PAID,Cold-storage wax-coated cartons
+INVOICE,INV-2026-018,Malwa Agro Exports Pvt Ltd,CUST-003,2026-08-30,2026-09-14,80000.00,30000.00,2026-10-03,UTR-SYNTH-A2618P,Sales,PARTIALLY_PAID,"Heavy-duty export pallet liners (Partially paid ₹30,000; ₹50,000 overdue 38 days)"
+INVOICE,INV-2026-019,Konkan Spices Co,CUST-004,2026-09-18,2026-10-03,45000.00,45000.00,2026-10-02,UTR-SYNTH-A2619,Sales,PAID,Printed spice pouch dispenser cartons (First order)
+INVOICE,INV-2025-006,Vidarbha Textile Mills Ltd,CUST-005,2025-07-12,2025-07-27,60000.00,60000.00,2025-07-31,UTR-SYNTH-A2506,Sales,PAID,Yarn cone packaging boxes (FY25)
+INVOICE,INV-2026-004,Vidarbha Textile Mills Ltd,CUST-005,2026-01-15,2026-01-30,70000.00,70000.00,2026-01-30,UTR-SYNTH-A2604,Sales,PAID,Fabric roll octagonal drums (FY25-Q4)
+INVOICE,INV-2026-008,Vidarbha Textile Mills Ltd,CUST-005,2026-04-08,2026-04-23,55000.00,55000.00,2026-04-23,UTR-SYNTH-A2608,Sales,PAID,Apparel export master cartons (April)
+INVOICE,INV-2026-009,Vidarbha Textile Mills Ltd,CUST-005,2026-06-10,2026-06-25,80000.00,80000.00,2026-06-20,UTR-SYNTH-A2609,Sales,PAID,Spun yarn corrugated boxes (June lot)
+INVOICE,INV-2026-013,Vidarbha Textile Mills Ltd,CUST-005,2026-08-05,2026-08-20,90000.00,90000.00,2026-08-15,UTR-SYNTH-A2613,Sales,PAID,Heavy GSM textile export cartons
+INVOICE,INV-2026-020,Vidarbha Textile Mills Ltd,CUST-005,2026-10-01,2026-10-16,85000.00,85000.00,2026-10-10,UTR-SYNTH-A2620,Sales,PAID,Festive garment dispatch boxes (settled early)
+INVOICE,INV-2026-023,Vidarbha Textile Mills Ltd,CUST-005,2026-10-16,2026-11-05,65000.00,0.00,,,Sales,UNPAID,Winter batch textile cartons (Open - Due in 14d)
+INVOICE,INV-2026-014,Narmada Organic Retail Hub,CUST-006,2026-08-18,2026-09-02,40000.00,40000.00,2026-09-01,UTR-SYNTH-A2614,Sales,PAID,Eco-kraft retail mailer boxes
+INVOICE,INV-2026-015,Narmada Organic Retail Hub,CUST-006,2026-09-20,2026-10-05,35000.00,35000.00,2026-10-04,UTR-SYNTH-A2615,Packaging Design & Tooling,PAID,Custom structural die-line and sample tooling
+INVOICE,INV-2026-024,Narmada Organic Retail Hub,CUST-006,2026-10-18,2026-11-09,55000.00,0.00,,,Sales,UNPAID,Organic hamper gift boxes (Open - Due in 18d)
+INVOICE,INV-2026-025,Narmada Organic Retail Hub,CUST-006,2026-10-18,2026-11-02,25000.00,0.00,,,Sales,CANCELLED,Cancelled duplicate entry (excluded from receivables and analytics)
+INVOICE,INV-2026-026,Aravalli Home Care Boutique,CUST-007,2026-10-20,2026-11-16,45000.00,0.00,,,Sales,UNPAID,Rigid candle & diffuser packaging sleeves (Open - Due in 25d)
+INVOICE,INV-2025-007,Satpura Legacy Traders (Archived),CUST-008,2025-05-12,2025-05-27,45000.00,45000.00,2025-05-26,UTR-SYNTH-A2507,Sales,PAID,Standard brown shipping cartons (FY25 archived account)
+BILL,BILL-2025-001,Shree Kraft Paper Mills Pvt Ltd,SUP-001,2025-06-02,2025-06-17,140000.00,140000.00,2025-06-16,UTR-SYNTH-AB2501,Inventory Purchases,PAID,180 GSM Kraft paper reels 4 tonnes (FY25)
+BILL,BILL-2025-002,Bharat Adhesives & Inks LLP,SUP-002,2025-10-10,2025-10-25,55000.00,55000.00,2025-10-24,UTR-SYNTH-AB2502,Inventory Purchases,PAID,Corrugation starch adhesive & flexo inks (FY25)
+BILL,BILL-2026-001,Shree Kraft Paper Mills Pvt Ltd,SUP-001,2026-04-03,2026-04-18,110000.00,110000.00,2026-04-17,UTR-SYNTH-AB2601,Inventory Purchases,PAID,150 GSM fluting medium paper reels (April)
+BILL,BILL-2026-002,Shree Kraft Paper Mills Pvt Ltd,SUP-001,2026-05-10,2026-05-25,145000.00,145000.00,2026-05-24,UTR-SYNTH-AB2602,Inventory Purchases,PAID,Virgin kraft liner reels - May production batch
+BILL,BILL-2026-003,Bharat Adhesives & Inks LLP,SUP-002,2026-06-08,2026-06-23,60000.00,60000.00,2026-06-22,UTR-SYNTH-AB2603,Inventory Purchases,PAID,Water-resistant bonding resin & stitching wire coils
+BILL,BILL-2026-004,Shree Kraft Paper Mills Pvt Ltd,SUP-001,2026-07-12,2026-07-27,155000.00,155000.00,2026-07-26,UTR-SYNTH-AB2604,Inventory Purchases,PAID,High-BF kraft paper reels - Q2 bulk supply
+BILL,BILL-2026-005,Godavari Corrugation Machinery Services,SUP-003,2026-08-14,2026-08-29,45000.00,45000.00,2026-08-28,UTR-SYNTH-AB2605,Machine Maintenance,PAID,Single-facer corrugation roller re-grooving & bearings
+BILL,BILL-2026-006,Pune Industrial Logistics Co,SUP-004,2026-09-05,2026-09-20,50000.00,50000.00,2026-09-19,UTR-SYNTH-AB2606,Transportation,PAID,Monthly B2B fleet freight charges (August-September)
+BILL,BILL-2026-007,Shree Kraft Paper Mills Pvt Ltd,SUP-001,2026-09-22,2026-10-07,85000.00,85000.00,2026-10-06,UTR-SYNTH-AB2607,Inventory Purchases,PAID,Festive season duplex board sheets
+BILL,BILL-2026-008,Shree Kraft Paper Mills Pvt Ltd,SUP-001,2026-10-10,2026-10-25,50000.00,0.00,,,Inventory Purchases,UNPAID,Kraft liner top-up reels (Due in 3 days)
+BILL,BILL-2026-009,Bharat Adhesives & Inks LLP,SUP-002,2026-10-13,2026-10-28,35000.00,0.00,,,Inventory Purchases,UNPAID,Four-colour flexo ink drums (Due in 6 days)
+BILL,BILL-2026-010,Godavari Corrugation Machinery Services,SUP-003,2026-10-17,2026-11-06,60000.00,0.00,,,Machine Maintenance,UNPAID,Rotary die-cutter anvil cover replacement (Due in 15 days)
+BILL,BILL-2026-011,Pune Industrial Logistics Co,SUP-004,2026-10-14,2026-11-14,70000.00,20000.00,2026-10-15,UTR-SYNTH-AB2611P,Transportation,PARTIALLY_PAID,"October regional dispatch contract (₹20,000 advance paid; ₹50,000 due in 23 days)"

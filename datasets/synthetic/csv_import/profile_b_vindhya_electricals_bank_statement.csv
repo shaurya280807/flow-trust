@@ -1,0 +1,20 @@
+date,narration,debit,credit,chq_ref_no,closing_balance
+2026-07-20,Supplier payment against BILL-B26-001 - VoltGuard Switchgear OEM Ltd,210000.00,,UTR-SYNTH-BB001,-30000.00
+2026-07-28,Warehouse & sales staff salaries - July 2026,62000.00,,UTR-SYNTH-BD001,-92000.00
+2026-07-29,Payment received against INV-B26-011 - Mahakoshal Hospitalities Pvt Ltd,,45000.00,UTR-SYNTH-B011,-47000.00
+2026-08-05,Payment received against INV-B26-006 - Chambal Solar & Power Systems,,60000.00,UTR-SYNTH-B006,13000.00
+2026-08-14,Payment received against INV-B26-001 - Bundelkhand Infra Projects Ltd,,90000.00,UTR-SYNTH-B001,103000.00
+2026-08-25,Supplier payment against BILL-B26-002 - Kaveri Copper Cables Pvt Ltd,195000.00,,UTR-SYNTH-BB002,-92000.00
+2026-08-28,Warehouse & sales staff salaries - August 2026,62000.00,,UTR-SYNTH-BD002,-154000.00
+2026-09-01,Payment received against INV-B26-012 - Mahakoshal Hospitalities Pvt Ltd,,50000.00,UTR-SYNTH-B012,-104000.00
+2026-09-02,Payment received against INV-B26-007 - Chambal Solar & Power Systems,,70000.00,UTR-SYNTH-B007,-34000.00
+2026-09-08,Payment received against INV-B26-002 - Bundelkhand Infra Projects Ltd,,85000.00,UTR-SYNTH-B002,51000.00
+2026-09-10,Showroom & godown rent - September 2026,28000.00,,UTR-SYNTH-BD003,23000.00
+2026-09-24,Payment received against INV-B26-008 - Chambal Solar & Power Systems,,65000.00,UTR-SYNTH-B008,88000.00
+2026-09-28,Payment received against INV-B26-003 - Bundelkhand Infra Projects Ltd,,75000.00,UTR-SYNTH-B003,163000.00
+2026-09-28,Warehouse & sales staff salaries - September 2026,62000.00,,UTR-SYNTH-BD004,101000.00
+2026-10-06,Showroom & godown rent - October 2026,28000.00,,UTR-SYNTH-BD005,73000.00
+2026-10-08,Payment received against INV-B26-009 - Chambal Solar & Power Systems,,40000.00,UTR-SYNTH-B009P,113000.00
+2026-10-09,Payment received against INV-B26-013 - Mahakoshal Hospitalities Pvt Ltd,,55000.00,UTR-SYNTH-B013,168000.00
+2026-10-14,Supplier payment against BILL-B26-003 - VoltGuard Switchgear OEM Ltd,50000.00,,UTR-SYNTH-BB003P,118000.00
+2026-10-16,September GST challan payment,24000.00,,UTR-SYNTH-BD006,94000.00

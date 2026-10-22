@@ -1,0 +1,21 @@
+transaction_date,description,amount,type,category,account,reference_id,counterparty_name,counterparty_role,document_number
+2026-07-20,Supplier payment against BILL-B26-001 - VoltGuard Switchgear OEM Ltd,210000.00,OUTFLOW,Inventory Purchases,BANK,UTR-SYNTH-BB001,VoltGuard Switchgear OEM Ltd,SUPPLIER,BILL-B26-001
+2026-07-28,Warehouse & sales staff salaries - July 2026,62000.00,OUTFLOW,Salaries,BANK,UTR-SYNTH-BD001,,,
+2026-07-29,Payment received against INV-B26-011 - Mahakoshal Hospitalities Pvt Ltd,45000.00,INFLOW,Sales,BANK,UTR-SYNTH-B011,Mahakoshal Hospitalities Pvt Ltd,CUSTOMER,INV-B26-011
+2026-08-05,Payment received against INV-B26-006 - Chambal Solar & Power Systems,60000.00,INFLOW,Sales,BANK,UTR-SYNTH-B006,Chambal Solar & Power Systems,CUSTOMER,INV-B26-006
+2026-08-14,Payment received against INV-B26-001 - Bundelkhand Infra Projects Ltd,90000.00,INFLOW,Sales,BANK,UTR-SYNTH-B001,Bundelkhand Infra Projects Ltd,CUSTOMER,INV-B26-001
+2026-08-25,Supplier payment against BILL-B26-002 - Kaveri Copper Cables Pvt Ltd,195000.00,OUTFLOW,Inventory Purchases,BANK,UTR-SYNTH-BB002,Kaveri Copper Cables Pvt Ltd,SUPPLIER,BILL-B26-002
+2026-08-28,Warehouse & sales staff salaries - August 2026,62000.00,OUTFLOW,Salaries,BANK,UTR-SYNTH-BD002,,,
+2026-09-01,Payment received against INV-B26-012 - Mahakoshal Hospitalities Pvt Ltd,50000.00,INFLOW,Sales,BANK,UTR-SYNTH-B012,Mahakoshal Hospitalities Pvt Ltd,CUSTOMER,INV-B26-012
+2026-09-02,Payment received against INV-B26-007 - Chambal Solar & Power Systems,70000.00,INFLOW,Sales,BANK,UTR-SYNTH-B007,Chambal Solar & Power Systems,CUSTOMER,INV-B26-007
+2026-09-08,Payment received against INV-B26-002 - Bundelkhand Infra Projects Ltd,85000.00,INFLOW,Sales,BANK,UTR-SYNTH-B002,Bundelkhand Infra Projects Ltd,CUSTOMER,INV-B26-002
+2026-09-10,Showroom & godown rent - September 2026,28000.00,OUTFLOW,Rent,BANK,UTR-SYNTH-BD003,,,
+2026-09-24,Payment received against INV-B26-008 - Chambal Solar & Power Systems,65000.00,INFLOW,Sales,BANK,UTR-SYNTH-B008,Chambal Solar & Power Systems,CUSTOMER,INV-B26-008
+2026-09-28,Payment received against INV-B26-003 - Bundelkhand Infra Projects Ltd,75000.00,INFLOW,Sales,BANK,UTR-SYNTH-B003,Bundelkhand Infra Projects Ltd,CUSTOMER,INV-B26-003
+2026-09-28,Warehouse & sales staff salaries - September 2026,62000.00,OUTFLOW,Salaries,BANK,UTR-SYNTH-BD004,,,
+2026-10-06,Showroom & godown rent - October 2026,28000.00,OUTFLOW,Rent,BANK,UTR-SYNTH-BD005,,,
+2026-10-08,Payment received against INV-B26-009 - Chambal Solar & Power Systems,40000.00,INFLOW,Sales,BANK,UTR-SYNTH-B009P,Chambal Solar & Power Systems,CUSTOMER,INV-B26-009
+2026-10-09,Payment received against INV-B26-013 - Mahakoshal Hospitalities Pvt Ltd,55000.00,INFLOW,Sales,BANK,UTR-SYNTH-B013,Mahakoshal Hospitalities Pvt Ltd,CUSTOMER,INV-B26-013
+2026-10-12,"Counter cash sale of MCBs, lugs & gland kits",18450.00,INFLOW,Sales,CASH,CASH-SYNTH-B001,,,
+2026-10-14,Supplier payment against BILL-B26-003 - VoltGuard Switchgear OEM Ltd,50000.00,OUTFLOW,Inventory Purchases,BANK,UTR-SYNTH-BB003P,VoltGuard Switchgear OEM Ltd,SUPPLIER,BILL-B26-003
+2026-10-16,September GST challan payment,24000.00,OUTFLOW,Taxes,BANK,UTR-SYNTH-BD006,,,

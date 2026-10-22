@@ -1,0 +1,6 @@
+document_type,document_number,counterparty_name,counterparty_code,issue_date,due_date,total_amount,amount_paid,settlement_date,payment_reference,category,status,description
+INVOICE,INV-ERR-001,Sahyadri Foods Pvt Ltd,CUST-001,2026-10-01,2026-10-16,50000.00,50000.00,2026-10-15,UTR-SYNTH-DOC01,Sales,PAID,Valid paid invoice
+INVOICE,INV-ERR-002,Deccan Beverages LLP,CUST-002,2026-10-15,2026-10-01,40000.00,0.00,,,Sales,UNPAID,Due date earlier than issue date
+INVOICE,INV-ERR-003,Malwa Agro Exports Pvt Ltd,CUST-003,2026-09-10,2026-09-25,60000.00,75000.00,2026-09-24,UTR-SYNTH-DOC03,Sales,PAID,Amount paid exceeds total amount
+BILL,BILL-ERR-001,Shree Kraft Paper Mills Pvt Ltd,SUP-001,2026-09-12,2026-09-27,85000.00,40000.00,,UTR-SYNTH-DOC04,Inventory Purchases,PARTIALLY_PAID,Missing settlement date on paid bill
+BILL,BILL-ERR-002,Bharat Adhesives & Inks LLP,SUP-002,2026-10-02,2026-10-17,35000.00,0.00,,,Inventory Purchases,PAID,Status claims PAID when amount_paid is 0

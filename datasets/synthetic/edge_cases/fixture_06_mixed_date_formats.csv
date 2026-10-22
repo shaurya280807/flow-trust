@@ -1,0 +1,3 @@
+transaction_date,description,amount,type,category,account,reference_id,counterparty_name,counterparty_role,document_number
+25/09/2026,Standard Indian DD/MM/YYYY date,32000.00,INFLOW,Sales,BANK,UTR-SYNTH-ERR601,,,
+09/28/2026,Conflicting US MM/DD/YYYY date row,18500.00,OUTFLOW,Utilities,BANK,UTR-SYNTH-ERR602,,,
