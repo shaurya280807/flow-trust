@@ -19,6 +19,7 @@ docs/
 │   └── WORKSPACE_AND_ONBOARDING_SPECIFICATION.md              # Multi-user businesses, join codes, setup flow & demo isolation
 ├── architecture/
 │   ├── TECH_STACK_AND_ARCHITECTURE.md                         # Next.js, TypeScript, Supabase, RLS, Zod, PapaParse & module layout
+│   ├── AI_SYSTEM_ARCHITECTURE.md                              # 8-module AI & financial intelligence architecture, boundaries & guardrails
 │   └── SECURITY_AND_DATA_INTEGRITY_SPECIFICATION.md           # Workspace isolation, RLS policies, secrets, record integrity & backups
 ├── financial/
 │   └── FINANCIAL_FOUNDATION_SPECIFICATION.md                  # Authoritative accounting rules, available cash & lib/finance/ formulas
@@ -38,7 +39,8 @@ docs/
 ├── operations/
 │   └── DEPLOYMENT_AND_ENVIRONMENT_READINESS.md                # Local setup, .env.example contract, Supabase migrations & Vercel deploy
 └── project/
-    └── MVP_DECISIONS_AND_CONSISTENCY_AUDIT.md                 # Finalized MVP decision log, cross-feature consistency & deferred scope
+    ├── MVP_DECISIONS_AND_CONSISTENCY_AUDIT.md                 # Finalized MVP decision log, cross-feature consistency & deferred scope
+    └── AI_AND_INTELLIGENCE_IMPLEMENTATION_ROADMAP.md          # 9-phase implementation plan & 35 atomic tasks (TASK-1.1 to TASK-9.4)
 ```
 
 ---
@@ -57,6 +59,8 @@ docs/
 | **Customers & Suppliers Directories, Payment Delays & Risk Indicators** | [features/CUSTOMER_SUPPLIER_INTELLIGENCE_SPECIFICATION.md](./features/CUSTOMER_SUPPLIER_INTELLIGENCE_SPECIFICATION.md) |
 | **Statistical vs. Risk Overview Reports & Print-to-PDF** | [features/REPORTS_SPECIFICATION.md](./features/REPORTS_SPECIFICATION.md) |
 | **AI Financial Copilot & Deterministic Tool Grounding** | [features/AI_COPILOT_SPECIFICATION.md](./features/AI_COPILOT_SPECIFICATION.md) |
+| **Complete 8-Module AI & Financial Intelligence Architecture** | [architecture/AI_SYSTEM_ARCHITECTURE.md](./architecture/AI_SYSTEM_ARCHITECTURE.md) |
+| **9-Phase AI & Intelligence Implementation Roadmap (`TASK-1.1`–`9.4`)** | [project/AI_AND_INTELLIGENCE_IMPLEMENTATION_ROADMAP.md](./project/AI_AND_INTELLIGENCE_IMPLEMENTATION_ROADMAP.md) |
 | **In-App Notifications & Payment Reminders** | [features/NOTIFICATIONS_AND_REMINDERS_SPECIFICATION.md](./features/NOTIFICATIONS_AND_REMINDERS_SPECIFICATION.md) |
 | **UI Layouts, Navigation, Theme System (`Light`/`Dark`/`System`) & Copy** | [design/UI_UX_AND_VISUAL_DESIGN_SPECIFICATION.md](./design/UI_UX_AND_VISUAL_DESIGN_SPECIFICATION.md) |
 | **Row Level Security (RLS), Workspace Isolation & Data Integrity** | [architecture/SECURITY_AND_DATA_INTEGRITY_SPECIFICATION.md](./architecture/SECURITY_AND_DATA_INTEGRITY_SPECIFICATION.md) |
