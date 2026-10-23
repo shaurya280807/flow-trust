@@ -19,6 +19,7 @@ docs/
 │   └── WORKSPACE_AND_ONBOARDING_SPECIFICATION.md              # Multi-user businesses, join codes, setup flow & demo isolation
 ├── architecture/
 │   ├── TECH_STACK_AND_ARCHITECTURE.md                         # Next.js, TypeScript, Supabase, RLS, Zod, PapaParse & module layout
+│   ├── LAYERED_INTELLIGENCE_AND_COMPONENT_ARCHITECTURE.md     # 7-layer intelligence pipeline, 12 analytical components (COMP-01..12) & risk indicators
 │   ├── AI_SYSTEM_ARCHITECTURE.md                              # 8-module AI & financial intelligence architecture, boundaries & guardrails
 │   └── SECURITY_AND_DATA_INTEGRITY_SPECIFICATION.md           # Workspace isolation, RLS policies, secrets, record integrity & backups
 ├── financial/
@@ -59,6 +60,7 @@ docs/
 | **Customers & Suppliers Directories, Payment Delays & Risk Indicators** | [features/CUSTOMER_SUPPLIER_INTELLIGENCE_SPECIFICATION.md](./features/CUSTOMER_SUPPLIER_INTELLIGENCE_SPECIFICATION.md) |
 | **Statistical vs. Risk Overview Reports & Print-to-PDF** | [features/REPORTS_SPECIFICATION.md](./features/REPORTS_SPECIFICATION.md) |
 | **AI Financial Copilot & Deterministic Tool Grounding** | [features/AI_COPILOT_SPECIFICATION.md](./features/AI_COPILOT_SPECIFICATION.md) |
+| **7-Layer Intelligence Pipeline & 12 Analytical Components (`COMP-01`–`12`)** | [architecture/LAYERED_INTELLIGENCE_AND_COMPONENT_ARCHITECTURE.md](./architecture/LAYERED_INTELLIGENCE_AND_COMPONENT_ARCHITECTURE.md) |
 | **Complete 8-Module AI & Financial Intelligence Architecture** | [architecture/AI_SYSTEM_ARCHITECTURE.md](./architecture/AI_SYSTEM_ARCHITECTURE.md) |
 | **9-Phase AI & Intelligence Implementation Roadmap (`TASK-1.1`–`9.4`)** | [project/AI_AND_INTELLIGENCE_IMPLEMENTATION_ROADMAP.md](./project/AI_AND_INTELLIGENCE_IMPLEMENTATION_ROADMAP.md) |
 | **In-App Notifications & Payment Reminders** | [features/NOTIFICATIONS_AND_REMINDERS_SPECIFICATION.md](./features/NOTIFICATIONS_AND_REMINDERS_SPECIFICATION.md) |
